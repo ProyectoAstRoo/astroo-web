@@ -1,0 +1,2 @@
+AstRoo — prueba de tipografía Nasalization Rg OTF.
+Extrae esta carpeta completa y abre index.html. Conserva la carpeta assets junto al archivo.
