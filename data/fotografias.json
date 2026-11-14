@@ -27,6 +27,19 @@
             "exposicion": "210 min",
             "fechas": "13 de septiembre de 2026",
             "publicada": true
+               },
+        
+  {
+  "objeto": "Vía Láctea",
+  "nombre": "Zona de Sagitario",
+  "titulo": "Vía Láctea – Zona de Sagitario",
+  "catalogo": "Vía Láctea",
+  "imagen": "./assets/fotos/Vía Lactea/Milky way zona sagitario.jpg",
+  "telescopio": "Seestar S50 Pro con gran angular",
+  "exposicion": "30 minutos",
+  "sesiones": "1 sesión",
+  "fechas": "14 de septiembre de 2026",
+  "publicada": true
         }
   ]
 }
