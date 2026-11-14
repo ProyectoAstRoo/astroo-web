@@ -27,6 +27,17 @@ input,select,textarea {
 .notice{font-size:11px;color:#a7b8ca;border-left:2px solid var(--gold);padding:8px 12px;margin-top:17px;background:rgba(227,183,126,.05)}.statement{padding:62px 0;background:linear-gradient(100deg,rgba(26,63,96,.5),rgba(8,13,25,.3));border-block:1px solid var(--line);text-align:center}.statement blockquote{font:600 clamp(24px,4vw,42px)/1.2 "Nasalization",sans-serif;letter-spacing:-1.2px;max-width:850px;margin:0 auto 16px}.statement blockquote span{color:#7dc2fa}.statement p{color:var(--muted);margin:0;font-size:12px}.aboutgrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:45px;align-items:center}.aboutmark{border:1px solid var(--line);border-radius:16px;min-height:245px;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,rgba(54,125,178,.28),transparent 50%),#0c1728}.aboutmark img{width:85%;max-width:370px;height:auto}.aboutgrid h2{font:700 31px/1.2 "Nasalization",sans-serif;margin:8px 0 14px}.aboutgrid p{color:#bac7d6;font-size:13px}.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.pillar{padding:17px;border:1px solid var(--line);border-radius:12px;background:#0c1727}.pillar b{display:block;font-size:12px;margin-bottom:5px}.pillar span{font-size:11px;color:var(--muted)}.footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:11px}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footbrand{font-size:17px;font-weight:800;color:white}.footbrand span{color:var(--blue)}.footnote{font-size:10px;color:#8195aa;margin-top:12px}
 @media(max-width:900px){.navlinks{display:none}.navlinks.show{display:flex;position:absolute;top:82px;left:0;right:0;flex-direction:column;align-items:flex-start;background:#080d19;padding:20px 24px;border-bottom:1px solid var(--line)}.menu{display:block}.hero-inner{grid-template-columns:1fr .8fr;gap:15px}.hero-art img{width:125%}.quickgrid{grid-template-columns:repeat(2,1fr)}.cataloggrid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:620px){.wrap{width:calc(100% - 30px)}.nav{height:68px}.brand img{width:145px;height:58px}.navlinks.show{top:68px}.hero{min-height:auto}.hero-inner{grid-template-columns:1fr;padding:65px 0 75px}.hero h1{font-size:48px;letter-spacing:-2.5px}.hero p{font-size:15px}.hero-art{height:175px;overflow:hidden}.hero-art img{width:280px}.hero-note{right:8px;bottom:0}.quickgrid{gap:8px}.quick a{padding:12px 10px;gap:9px}.quick small{font-size:9px}.section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:12px}.featuregrid{grid-template-columns:1fr}.mini-features{grid-template-columns:1fr 1fr;grid-template-rows:auto}.mini-features .feature{min-height:155px}.cataloggrid{grid-template-columns:repeat(2,1fr);gap:9px}.catalog{padding:14px;min-height:116px}.gallerygrid{grid-template-columns:1fr}.shotpic{height:190px}.aboutgrid{grid-template-columns:1fr;gap:25px}.aboutmark{min-height:170px}.pillars{grid-template-columns:1fr}.footrow{display:block}.footrow>*{margin-bottom:9px}}
+
+/* Visor ampliado de fotografías (Lightbox) */
+.lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:35px;background:rgba(0,0,0,.92);backdrop-filter:blur(7px)}
+.lightbox.open{display:flex}
+.lightbox img{display:block;max-width:min(94vw,1600px);max-height:88vh;width:auto;height:auto;object-fit:contain;border-radius:5px;box-shadow:0 18px 65px rgba(0,0,0,.55)}
+.lightbox-close{position:absolute;top:18px;right:22px;width:44px;height:44px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(10,18,30,.75);color:#fff;font:28px/1 Arial,sans-serif;cursor:pointer}
+.lightbox-close:hover{background:#173653;border-color:#69b8f2}
+.gallerygrid .shotpic img{cursor:zoom-in}
+body.lightbox-open{overflow:hidden}
+@media(max-width:620px){.lightbox{padding:14px}.lightbox img{max-width:96vw;max-height:86vh}.lightbox-close{top:10px;right:10px}}
+
 </style>
 </head>
 <body>
@@ -81,6 +92,12 @@ input,select,textarea {
 </div><div class="equipment-panel" role="tabpanel" aria-live="polite"><h3 id="equipment-panel-title" data-i18n="equipment_telescopes">Telescopios</h3><p data-i18n="equipment_empty">En este apartado iré mostrando el equipo que utilizo.</p></div></div></section>
 <section class="section" id="sobre" style="padding-top:0"><div class="wrap"><div class="eyebrow" data-i18n="about_eyebrow">Sobre el proyecto</div><h2 style="font:700 32px "Nasalization";margin:8px 0 12px" data-i18n="about_title">AstRoo: mirar, comprender y compartir.</h2><p style="max-width:780px;color:var(--muted);font-size:13px" data-i18n="about_text">Un proyecto personal que une astrofotografía, observación y divulgación. Una invitación a descubrir el cielo con curiosidad, sensibilidad estética y rigor científico.</p></div></section>
 </main>
+
+<div class="lightbox" id="astroo-lightbox" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" aria-hidden="true">
+  <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar fotografía">×</button>
+  <img id="lightbox-image" src="" alt="">
+</div>
+
 <footer class="footer"><div class="wrap footrow"><div><div class="footbrand">ast<span>Roo</span></div><div data-i18n="tagline">La belleza del universo. La precisión de la ciencia.</div></div><div data-i18n="footer_topics">Astrofotografía · Ciencia · Descubrimiento</div><div>© AstRoo · <span data-i18n="personal_project">Proyecto personal</span></div></div><div class="wrap footnote" data-i18n="footer_note">Prototipo bilingüe: contenido y fotografías definitivas pendientes de integrar.</div></footer>
 <script>
 const copy={
@@ -255,6 +272,50 @@ async function loadAstrooProjects(){
   }
 }
 loadAstrooProjects();
+
+
+// Visor ampliado compartido por la galería y los proyectos.
+(function(){
+  const overlay=document.getElementById('astroo-lightbox');
+  const enlarged=document.getElementById('lightbox-image');
+  const closeButton=document.getElementById('lightbox-close');
+  if(!overlay||!enlarged||!closeButton)return;
+
+  function closeLightbox(){
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    enlarged.src='';
+    enlarged.alt='';
+    document.body.classList.remove('lightbox-open');
+  }
+
+  function openLightbox(image){
+    enlarged.src=image.currentSrc||image.src;
+    enlarged.alt=image.alt||'Fotografía AstRoo ampliada';
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    document.body.classList.add('lightbox-open');
+    closeButton.focus();
+  }
+
+  ['gallery-grid','projects-grid'].forEach(id=>{
+    const grid=document.getElementById(id);
+    if(!grid)return;
+    grid.addEventListener('click',event=>{
+      const image=event.target.closest('.shotpic img');
+      if(image&&grid.contains(image))openLightbox(image);
+    });
+  });
+
+  closeButton.addEventListener('click',closeLightbox);
+  overlay.addEventListener('click',event=>{
+    if(event.target===overlay)closeLightbox();
+  });
+  enlarged.addEventListener('click',event=>event.stopPropagation());
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&overlay.classList.contains('open'))closeLightbox();
+  });
+})();
 
 </script>
 </body></html>
