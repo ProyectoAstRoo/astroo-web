@@ -1,11 +1,14 @@
+
 {
-  "id": "sn2026aaiv",
-  "titulo": "Supernova 2026aaiv",
-  "categoria": "Supernovas",
-  "resumen": "Proyecto de estudio de la supernova 2026aaiv.",
-  "imagen": "images/proyectos/supernovas/SN2026aaiv_completo.jpg",
-  "alt": "Supernova 2026aaiv",
-  "publicado": true
-}{
-  "proyectos": []
+  "proyectos": [
+    {
+      "id": "sn2026aaiv",
+      "titulo": "Supernova 2026aaiv",
+      "categoria": "Supernovas",
+      "resumen": "Proyecto de estudio de la supernova 2026aaiv.",
+      "imagen": "images/proyectos/supernovas/Supernova 2026aaiv_completo.jpg",
+      "alt": "Supernova 2026aaiv",
+      "publicado": true
+    }
+  ]
 }
