@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "fotografias": [
+    {
+      "objeto": "M33",
+      "nombre": "Galaxia del Triángulo",
+      "titulo": "M33 — Galaxia del Triángulo",
+      "catalogo": "Messier",
+      "imagen": "./assets/fotos/Messier/M033_S50P_11-10-2026_15-10-2026_345m_2noches_final_web.jpg",
+      "alt": "Fotografía de M33, la Galaxia del Triángulo, realizada con Seestar S50 Pro",
+      "telescopio": "Seestar S50 Pro",
+      "exposicion": "345 min",
+      "sesiones": "2 noches",
+      "fechas": "11 y 15 de octubre de 2026",
+      "publicada": true
+    }
+  ]
+}
