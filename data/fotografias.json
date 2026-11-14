@@ -13,6 +13,18 @@
       "sesiones": "2 noches",
       "fechas": "11 y 15 de octubre de 2026",
       "publicada": true
-    }
+    },
+            {
+            "objeto": "IC 1396",
+            "nombre": "Trompa del Elefante",
+            "titulo": "IC 1396 – Trompa del Elefante",
+            "catalogo": "IC",
+            "imagen": "./assets/fotos/IC/IC1396_S50P_13-09-2026_210m_Mos_final_web_V2.jpg",
+            "alt": "Fotografía de IC 1396, la Trompa del Elefante, realizada con Seestar S50 Pro",
+            "telescopio": "Seestar S50 Pro",
+            "exposicion": "210 min",
+            "fechas": "13 de septiembre de 2026",
+            "publicada": true
+        }
   ]
 }
