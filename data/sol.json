@@ -1,3 +1,16 @@
 {
-  "fotografias": []
+  "sol": [
+    {
+      "id": "protuberancia-solar-20260220",
+      "titulo": "Protuberancia solar",
+      "categoria": "Protuberancias",
+      "fecha": "2026-02-20",
+      "lugar": "Villarcayo",
+      "telescopio": "ACUTER Phoenix H-alfa 40 mm",
+      "camara": "Player One Apollo-M Mini",
+      "imagen": "images/sistema-solar/sol/20-02-2026.jpg",
+      "alt": "Protuberancia solar fotografiada en H-alfa",
+      "publicado": true
+    }
+  ]
 }
