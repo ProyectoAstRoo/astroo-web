@@ -1,3 +1,16 @@
 {
-  "equipos": []
+  "equipos": [
+    {
+      "id": "sky-watcher-ed80-evostar",
+      "categoria": "equipment_telescopes",
+      "titulo": "Sky-Watcher ED80 Evostar",
+      "descripcion": "Refractor ED utilizado para observación astronómica y astrofotografía.",
+      "caracteristicas": [
+        "Apertura: 80 mm",
+        "Distancia focal: 600 mm",
+        "Relación focal: f/7,5"
+      ],
+      "publicado": true
+    }
+  ]
 }
