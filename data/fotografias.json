@@ -11,8 +11,10 @@
       "telescopio": "Seestar S50 Pro",
       "exposicion": "345 min",
       "sesiones": "2 noches",
-      "fechas": "11 y 15 de octubre de 2026",
-      "publicada": true
+     "fechas": "11 y 15 de octubre de 2026",
+"lugar": "Ribas de la Valduerna",
+"notas": "Fotografía realizada durante dos noches.",
+"publicada": true
     },
             {
             "objeto": "IC 1396",
