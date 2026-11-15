@@ -349,6 +349,95 @@
         "ionizing_star": "https://doi.org/10.1051/0004-6361:20041788",
         "spitzer": "https://doi.org/10.1088/0004-637X/697/1/787"
       }
+    },
+    {
+      "id": "M108",
+      "aliases": [
+        "M 108",
+        "Messier 108",
+        "NGC 3556",
+        "Galaxia de la Tabla de Surf",
+        "Galaxia Surfboard",
+        "Surfboard Galaxy"
+      ],
+      "nombre": "Galaxia de la Tabla de Surf",
+      "catalogo": "Messier",
+      "tipo": "Galaxia espiral vista casi de canto; presenta una estructura alargada y un disco rico en regiones de polvo.",
+      "constelacion": "Ursa Major (Osa Mayor)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "11h 11m 30.967s",
+        "declinacion": "+55° 40′ 26.84″",
+        "ascension_recta_grados": 167.879029,
+        "declinacion_grados": 55.674122,
+        "longitud_galactica": "l = 148.3144°",
+        "latitud_galactica": "b = +56.2517°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 46 millones de años luz",
+          "detalle": "Valor divulgativo publicado por NASA; las estimaciones de distancia pueden variar según el método."
+        },
+        {
+          "nombre": "Magnitud aparente",
+          "valor": "≈ 10.0 mag",
+          "detalle": "Valor aproximado indicado por NASA; la detectabilidad depende del brillo superficial y de las condiciones del cielo."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "14.59′ × 3.87′",
+          "detalle": "Dimensiones ópticas catalogadas por SIMBAD; el tamaño depende del límite isofotal utilizado."
+        },
+        {
+          "nombre": "Inclinación aparente",
+          "valor": "Vista casi de canto",
+          "detalle": "La orientación casi de canto da lugar a su aspecto alargado característico."
+        },
+        {
+          "nombre": "Velocidad radial",
+          "valor": "≈ 699 km/s",
+          "detalle": "Valor heliocéntrico recopilado por SIMBAD; asociado a un corrimiento al rojo espectroscópico z ≈ 0.002334."
+        },
+        {
+          "nombre": "Clasificación morfológica",
+          "valor": "Galaxia espiral",
+          "detalle": "NASA la describe como galaxia espiral barrada; SIMBAD recoge una clasificación SA C en una referencia morfológica. Las clasificaciones dependen del estudio y de los criterios empleados."
+        }
+      ],
+      "estructura": "M108, también catalogada como NGC 3556, es una galaxia espiral observada con una inclinación elevada, casi de canto. Su disco se proyecta como una estructura muy alargada, con regiones de polvo y zonas de formación estelar distribuidas a lo largo del plano galáctico. Su aspecto visual recuerda a una tabla de surf, de donde procede su nombre popular.",
+      "fisica": "La observación de M108 casi de canto permite estudiar la distribución del polvo y del gas a través del disco galáctico. Las regiones de formación estelar y el medio interestelar contribuyen a su apariencia irregular en imágenes profundas. SIMBAD la clasifica además como un objeto con núcleo galáctico activo, aunque las propiedades nucleares deben interpretarse según la banda y el estudio utilizado.",
+      "entorno": "M108 se encuentra en la constelación de la Osa Mayor y forma parte del entorno galáctico asociado al cúmulo de galaxias de la Osa Mayor. NASA la sitúa entre los miembros grandes y brillantes de ese conjunto, dentro del supercúmulo de Virgo.",
+      "interes": "Su orientación casi de canto la convierte en un objeto interesante para estudiar la estructura vertical de los discos galácticos, la distribución del polvo y la actividad de formación estelar. Su tamaño angular relativamente amplio permite apreciar su silueta alargada en imágenes de cielo profundo.",
+      "observacion": "M108 se localiza en la Osa Mayor, muy cerca de la nebulosa planetaria M97 en el cielo. Su magnitud integrada ronda la 10, pero su brillo superficial es mucho más bajo que el de una estrella de esa magnitud: conviene utilizar cielos oscuros, buena transparencia y suficiente tiempo de integración para registrar detalles del disco y sus bandas de polvo.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "160 min",
+        "sesiones": "2 noches",
+        "fechas": "2 y 19 de febrero de 2025",
+        "lugar": "Villarcayo",
+        "nota": "Fotografía de AstRoo realizada durante dos noches."
+      },
+      "referencias": [
+        {
+          "autores": "NASA Science",
+          "titulo": "Messier 108",
+          "publicacion": "Hubble Messier Catalog",
+          "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-108/",
+          "nota": "Distancia aproximada, magnitud aparente, constelación, tipo de objeto y descripción de la galaxia."
+        },
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: M 108",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=M108",
+          "nota": "Coordenadas ICRS J2000, velocidad radial, corrimiento al rojo, clasificación morfológica y tamaño angular."
+        }
+      ],
+      "fuentes_urls": {
+        "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-108/",
+        "simbad": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=M108"
+      }
     }
   ]
 }
