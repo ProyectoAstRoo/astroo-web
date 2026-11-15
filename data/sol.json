@@ -34,6 +34,17 @@
       "imagen": "images/sistema-solar/sol/2026-03-28-0855_9-H-Alfa_lapl2_ap299-enhancedcolor_final_web.jpg",
       "alt": "Fotografía solar en H-alfa del 28 de marzo de 2026 a las 08:55, realizada con telescopio ACUTER de 40 mm",
       "publicado": true
+    },
+    {
+      "id": "sol-20260402-roi",
+      "titulo": "Sol en H-alfa — ROI",
+      "subtitulo": "2 de abril de 2026",
+      "categoria": "H-alfa",
+      "fecha": "2026-04-02",
+      "telescopio": "ACUTER 40 mm H-alfa",
+      "imagen": "images/sistema-solar/sol/2abril2026ROI.jpg",
+      "alt": "Fotografía del Sol en H-alfa, procesada con recorte ROI, realizada con telescopio ACUTER de 40 mm",
+      "publicado": true
     }
   ]
 }
