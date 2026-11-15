@@ -855,6 +855,79 @@
       "fuentes_urls": {
         "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=IC342"
       }
+    },
+    {
+      "id": "NGC 5033",
+      "aliases": [
+        "NGC5033",
+        "UGC 8307",
+        "PGC 45948"
+      ],
+      "nombre": "NGC 5033 — Galaxia espiral",
+      "catalogo": "NGC",
+      "tipo": "Galaxia espiral (SA(s)c), clasificada como galaxia Seyfert 2 por su núcleo activo.",
+      "constelacion": "Canes Venatici (Perros de Caza)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "13h 13m 27.535s",
+        "declinacion": "+36° 35′ 37.14″",
+        "longitud_galactica": "l = 98.0585°",
+        "latitud_galactica": "b = +79.4480°",
+        "ascension_recta_grados": 198.36472916666668,
+        "declinacion_grados": 36.593650000000004
+      },
+      "parametros": [
+        {
+          "nombre": "Tipo de galaxia",
+          "valor": "SA(s)c / Seyfert 2",
+          "detalle": "Clasificación morfológica de galaxia espiral y clasificación nuclear Seyfert 2 según los registros de SIMBAD."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "≈ 6.29′ × 2.80′",
+          "detalle": "Dimensiones ópticas catalogadas; dependen de la banda y del límite isofotal."
+        },
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 19.5 Mpc",
+          "detalle": "Valor recopilado en SIMBAD a partir de una estimación Tully–Fisher, con incertidumbre publicada de −4.4/+4.4 Mpc."
+        },
+        {
+          "nombre": "Distancia en años luz",
+          "valor": "≈ 64 millones de años luz",
+          "detalle": "Conversión aproximada de 19.5 Mpc; la incertidumbre de la distancia es considerable."
+        },
+        {
+          "nombre": "Corrimiento al rojo",
+          "valor": "z ≈ 0.002763",
+          "detalle": "Valor espectroscópico recopilado por SIMBAD; para una galaxia relativamente cercana, la velocidad peculiar puede ser relevante."
+        }
+      ],
+      "estructura": "NGC 5033 es una galaxia espiral vista con una inclinación apreciable, cuyo disco muestra brazos espirales y una región central relativamente brillante. Su clasificación como Seyfert 2 indica la presencia de un núcleo galáctico activo cuyo espectro presenta las características de esta clase.",
+      "fisica": "La actividad Seyfert se asocia a la acreción de materia sobre un agujero negro supermasivo en el núcleo. La radiación emitida por el entorno de acreción ioniza el gas circundante y produce líneas de emisión características. La clasificación Seyfert 2 describe las propiedades observadas del núcleo y no implica que toda la emisión de la galaxia esté dominada por el núcleo activo.",
+      "entorno": "NGC 5033 se encuentra en la constelación de Canes Venatici (Perros de Caza), en una región del cielo próxima a la Osa Mayor. Es una galaxia relativamente aislada en comparación con grandes sistemas de cúmulos, aunque su entorno y posibles interacciones se estudian mediante observaciones de su disco y del gas.",
+      "interes": "NGC 5033 resulta interesante por combinar una estructura espiral cercana y observable con un núcleo galáctico activo de tipo Seyfert 2. Su estudio permite investigar conjuntamente la dinámica del disco, el gas interestelar y los procesos de acreción que alimentan la actividad nuclear.",
+      "observacion": "Con una extensión angular de varios minutos de arco y una magnitud integrada cercana a la undécima, NGC 5033 es un objetivo adecuado para telescopios de aficionado. En fotografía conviene buscar un buen equilibrio entre la señal del núcleo y el bajo brillo superficial de las regiones externas del disco.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "80 min",
+        "sesiones": "1 noche",
+        "fechas": "31 de marzo de 2025",
+        "lugar": "Villarcayo",
+        "nota": "Fotografía de AstRoo realizada durante una sesión. Los datos de captura proceden del catálogo fotográfico de la web."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: NGC 5033",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=NGC+5033",
+          "nota": "Coordenadas ICRS/J2000, clasificación Seyfert 2, tamaño angular y datos recopilados de distancia y corrimiento al rojo."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=NGC+5033"
+      }
     }
   ]
 }
