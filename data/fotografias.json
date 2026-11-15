@@ -308,6 +308,29 @@
       "fechas": "Del 21 al 26 de enero de 2026",
       "lugar": "Tromso",
       "notas": ""
+    },
+    {
+      "objeto": "NGC 6960",
+      "nombre": "Nebulosa del Velo (Escoba de la Bruja)",
+      "titulo": "NGC 6960 — Nebulosa del Velo",
+      "catalogo": "NGC",
+      "imagen": "./assets/fotos/NGC/NGC6960_S50_27-06-2025_220m_MOS_final_web.jpg",
+      "alt": "Fotografía de NGC 6960, la Nebulosa del Velo, realizada con Seestar S50 mediante mosaico",
+      "telescopio": "Seestar S50",
+      "exposicion": "220 min",
+      "sesiones": "1 sesión",
+      "fechas": "27 de junio de 2025",
+      "lugar": "Villarcayo",
+      "notas": "Fotografía realizada mediante mosaico.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 311.408333,
+        "dec": 30.708333,
+        "raTexto": "20h 45m 38s",
+        "decTexto": "+30° 42′ 30″",
+        "constelacion": "Cygnus",
+        "constelacionEs": "Cisne"
+      }
     }
   ]
 }
