@@ -252,6 +252,17 @@
       "fechas": "Del 21 al 26 de enero de 2026",
       "lugar": "Tromsø, Noruega",
       "notas": "Fotografía de auroras boreales realizada durante el viaje a Tromsø."
+    },
+    {
+      "objeto": "Auroras boreales",
+      "nombre": "Auroras boreales — Tromsø",
+      "titulo": "Auroras boreales — Tromsø, Noruega",
+      "catalogo": "Otros",
+      "imagen": "./assets/fotos/Otras/IMG_1467_web.jpg",
+      "alt": "Fotografía de auroras boreales en Tromsø, Noruega, del 21 al 26 de enero de 2026",
+      "fechas": "Del 21 al 26 de enero de 2026",
+      "lugar": "Tromsø, Noruega",
+      "notas": "Fotografía de auroras boreales realizada durante el viaje a Tromsø."
     }
   ]
 }
