@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "fichas": [
+    {
+      "id": "M33",
+      "aliases": [
+        "M 33",
+        "Messier 33",
+        "NGC 598",
+        "UGC 1117",
+        "Galaxia del Triángulo",
+        "Triangulum Galaxy"
+      ],
+      "nombre": "Galaxia del Triángulo",
+      "catalogo": "Messier",
+      "tipo": "Galaxia espiral de tipo tardío; clasificación SIMBAD SA(s)cd",
+      "constelacion": "Triangulum (Triángulo)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "01h 33m 50.897s",
+        "declinacion": "+30° 39′ 36.63″",
+        "longitud_galactica": "l = 133.6102°",
+        "latitud_galactica": "b = −31.3307°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "840 ± 11 kpc",
+          "detalle": "Módulo de distancia μ₀ = 24.622 ± 0.030 mag; determinación con Cefeidas observadas por HST."
+        },
+        {
+          "nombre": "Distancia en años luz",
+          "valor": "≈ 2.74 millones de años luz",
+          "detalle": "Conversión de 840 kpc; incertidumbre equivalente aproximada ± 0.036 millones de años luz."
+        },
+        {
+          "nombre": "Magnitud aparente integrada V",
+          "valor": "5.72 ± 0.04 mag",
+          "detalle": "Valor fotométrico recopilado por SIMBAD."
+        },
+        {
+          "nombre": "Tamaño angular óptico",
+          "valor": "60.26′ × 35.48′",
+          "detalle": "Dimensiones catalogadas; dependen del límite isofotal y de la banda."
+        },
+        {
+          "nombre": "Tamaño lineal proyectado",
+          "valor": "≈ 14.7 × 8.7 kpc",
+          "detalle": "Estimación geométrica a partir del tamaño angular anterior y d = 840 kpc; no es un diámetro físico único."
+        },
+        {
+          "nombre": "Velocidad radial heliocéntrica",
+          "valor": "−179.2 ± 1.7 km s⁻¹",
+          "detalle": "Valor compilado por SIMBAD; el signo negativo indica aproximación en esta convención."
+        },
+        {
+          "nombre": "Corrimiento al rojo espectroscópico",
+          "valor": "z = −0.000598 ± 0.000006",
+          "detalle": "Valor compilado por SIMBAD; para objetos cercanos el movimiento peculiar domina sobre la expansión cosmológica."
+        }
+      ],
+      "estructura": "M33 es una galaxia espiral de baja inclinación y tipo tardío, con brazos relativamente abiertos y sin una barra central prominente en la clasificación habitual. Su disco contiene población estelar, gas atómico y molecular, polvo y regiones de formación estelar. La clasificación de catálogo SA(s)cd indica una espiral sin barra (SA), con estructura de brazos sin anillo interior dominante (s) y tipo tardío cd.",
+      "fisica": "Su cercanía y orientación permiten resolver poblaciones estelares individuales y estudiar regiones H II, cúmulos, asociaciones OB, estrellas variables y el medio interestelar. La formación estelar no es uniforme: se concentra en estructuras espirales y complejos de gas y polvo. M33 es también un laboratorio para estudiar la relación entre el disco gaseoso, la dinámica galáctica y la evolución de galaxias espirales de masa relativamente modesta.",
+      "entorno": "M33 forma parte del Grupo Local y está asociada gravitacionalmente al entorno de M31 (Andrómeda) y la Vía Láctea. La historia orbital e interacción pasada con M31 continúa siendo objeto de investigación; no conviene presentar un encuentro cercano concreto como hecho establecido sin especificar el modelo dinámico y sus incertidumbres.",
+      "interes": "La distancia de M33 es especialmente importante para calibrar indicadores de distancia extragalácticos. El análisis de 154 Cefeidas con fotometría HST publicado por Breuval et al. (2023) obtuvo μ₀ = 24.622 ± 0.030 mag, equivalente a 840 ± 11 kpc y una precisión del 1.3%. La galaxia también permite estudiar la formación estelar resuelta y comparar la estructura de un disco espiral cercano con la Vía Láctea.",
+      "observacion": "M33 presenta un tamaño angular extenso y un brillo superficial relativamente bajo en sus regiones externas. Aunque su magnitud integrada es relativamente brillante, la detección visual y el registro de los brazos dependen mucho de la oscuridad del cielo, la transparencia, la apertura y el aumento. Para fotografía de campo amplio conviene encuadrar con margen alrededor del disco.",
+      "captura": {
+        "equipo": "Seestar S50 Pro",
+        "integracion": "345 min",
+        "sesiones": "2 noches",
+        "fechas": "11 y 15 de octubre de 2026",
+        "lugar": "Ribas de la Valduerna",
+        "nota": "Fotografía de AstRoo realizada durante dos noches. Los datos de captura proceden del catálogo fotográfico de la web."
+      },
+      "referencias": [
+        {
+          "autores": "Breuval, L. et al. (2023)",
+          "titulo": "A 1.3% distance to M33 from HST Cepheid photometry",
+          "publicacion": "The Astrophysical Journal, 951, 118",
+          "doi": "10.3847/1538-4357/acd3f4",
+          "url": "https://arxiv.org/abs/2304.00037",
+          "nota": "Determinación de distancia basada en 154 Cefeidas; μ₀ = 24.622 ± 0.030 mag."
+        },
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: M 33",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=M33",
+          "nota": "Identificadores, coordenadas, tipo morfológico, tamaño angular, fotometría y velocidad radial."
+        },
+        {
+          "autores": "NASA / ESA",
+          "titulo": "Messier 33 (The Triangulum Galaxy)",
+          "publicacion": "NASA Science — Hubble Messier Catalog",
+          "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-33/",
+          "nota": "Contexto general y material de observación de Hubble."
+        },
+        {
+          "autores": "Brunthaler, A. et al. (2005)",
+          "titulo": "The geometric distance and proper motion of the Triangulum Galaxy (M33)",
+          "publicacion": "Science, 307, 1440–1443",
+          "doi": "10.1126/science.1108342",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15746420/",
+          "nota": "Medida geométrica histórica mediante máseres de H₂O y VLBA; 730 ± 168 kpc."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=M33",
+        "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-33/",
+        "breuval": "https://arxiv.org/abs/2304.00037"
+      }
+    }
+  ]
+}
