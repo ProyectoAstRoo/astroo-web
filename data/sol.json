@@ -1,5 +1,5 @@
 {
-"fotografias": [
+  "fotografias": [
     {
       "id": "protuberancia-solar-20260220",
       "titulo": "Protuberancia solar",
@@ -10,6 +10,17 @@
       "camara": "Player One Apollo-M Mini",
       "imagen": "images/sistema-solar/sol/20-02-2026.jpg",
       "alt": "Protuberancia solar fotografiada en H-alfa",
+      "publicado": true
+    },
+    {
+      "id": "sol-20260402",
+      "titulo": "Sol en H-alfa",
+      "subtitulo": "2 de abril de 2026",
+      "categoria": "H-alfa",
+      "fecha": "2026-04-02",
+      "telescopio": "ACUTER 40 mm H-alfa",
+      "imagen": "images/sistema-solar/sol/02-04-2026.jpg",
+      "alt": "Fotografía del Sol realizada con telescopio ACUTER de 40 mm en H-alfa",
       "publicado": true
     }
   ]
