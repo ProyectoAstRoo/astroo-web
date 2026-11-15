@@ -183,6 +183,29 @@
         "constelacion": "Cygnus",
         "constelacionEs": "Cisne"
       }
+    },
+    {
+      "objeto": "IC 342",
+      "nombre": "Galaxia Oculta",
+      "titulo": "IC 342 — Galaxia Oculta",
+      "catalogo": "IC",
+      "imagen": "./assets/fotos/IC/IC0342_S50_25-12-2024_100m_final_web.jpg",
+      "alt": "Fotografía de IC 342, la Galaxia Oculta, realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "100 min",
+      "sesiones": "1 noche",
+      "fechas": "25 de diciembre de 2024",
+      "lugar": "Ribas de la Valduerna",
+      "notas": "Fotografía realizada durante una sesión.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 56.7021417,
+        "dec": 68.0961056,
+        "raTexto": "03h 46m 48.514s",
+        "decTexto": "+68° 05′ 45.98″",
+        "constelacion": "Camelopardalis",
+        "constelacionEs": "Jirafa"
+      }
     }
   ]
 }
