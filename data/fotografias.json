@@ -116,6 +116,29 @@
       }
     },
     {
+      "objeto": "M2",
+      "nombre": "Cúmulo globular M2",
+      "titulo": "M2 — Cúmulo globular",
+      "catalogo": "Messier",
+      "imagen": "./assets/fotos/Messier/M002_S50_14-09-2025_30m_final_web.jpg",
+      "alt": "Fotografía de Messier 2, cúmulo globular, realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "30 min",
+      "sesiones": "1 sesión",
+      "fechas": "14 de septiembre de 2025",
+      "lugar": "Villarcayo",
+      "notas": "Cúmulo globular Messier 2.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 323.362583,
+        "dec": -0.82325,
+        "raTexto": "21h 33m 27.02s",
+        "decTexto": "−00° 49′ 23.7″",
+        "constelacion": "Aquarius",
+        "constelacionEs": "Acuario"
+      }
+    },
+    {
       "objeto": "NGC 7023",
       "nombre": "Nebulosa Iris",
       "titulo": "NGC 7023 — Nebulosa Iris",
