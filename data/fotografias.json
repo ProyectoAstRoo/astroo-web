@@ -11,34 +11,49 @@
       "telescopio": "Seestar S50 Pro",
       "exposicion": "345 min",
       "sesiones": "2 noches",
-     "fechas": "11 y 15 de octubre de 2026",
-"lugar": "Ribas de la Valduerna",
-"notas": "Fotografía realizada durante dos noches.",
-"publicada": true
+      "fechas": "11 y 15 de octubre de 2026",
+      "lugar": "Ribas de la Valduerna",
+      "notas": "Fotografía realizada durante dos noches.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 23.4621,
+        "dec": 30.6599,
+        "raTexto": "01h 33m 51s",
+        "decTexto": "+30° 39′ 37″",
+        "constelacion": "Triangulum",
+        "constelacionEs": "Triángulo"
+      }
     },
-            {
-            "objeto": "IC 1396",
-            "nombre": "Trompa del Elefante",
-            "titulo": "IC 1396 – Trompa del Elefante",
-            "catalogo": "IC",
-            "imagen": "./assets/fotos/IC/IC1396_S50P_13-09-2026_210m_Mos_final_web_V2.jpg",
-            "alt": "Fotografía de IC 1396, la Trompa del Elefante, realizada con Seestar S50 Pro",
-            "telescopio": "Seestar S50 Pro",
-            "exposicion": "210 min",
-            "fechas": "13 de septiembre de 2026",
-            "publicada": true
-               },
-        
-  {
-  "objeto": "Vía Láctea",
-  "nombre": "Zona de Sagitario",
-  "titulo": "Vía Láctea – Zona de Sagitario",
-"imagen": "https://raw.githubusercontent.com/ProyectoAstRoo/astroo-web/main/assets/fotos/Via%20L%C3%A1ctea/Milky%20way%20zona%20sagitario.jpg",
-  "telescopio": "Seestar S50 Pro con gran angular",
-  "exposicion": "30 minutos",
-  "sesiones": "1 sesión",
-  "fechas": "14 de septiembre de 2026",
-  "publicada": true
-        }
+    {
+      "objeto": "IC 1396",
+      "nombre": "Trompa del Elefante",
+      "titulo": "IC 1396 – Trompa del Elefante",
+      "catalogo": "IC",
+      "imagen": "./assets/fotos/IC/IC1396_S50P_13-09-2026_210m_Mos_final_web_V2.jpg",
+      "alt": "Fotografía de IC 1396, la Trompa del Elefante, realizada con Seestar S50 Pro",
+      "telescopio": "Seestar S50 Pro",
+      "exposicion": "210 min",
+      "fechas": "13 de septiembre de 2026",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 324.75,
+        "dec": 57.5,
+        "raTexto": "21h 39m 00s",
+        "decTexto": "+57° 30′ 00″",
+        "constelacion": "Cepheus",
+        "constelacionEs": "Cefeo"
+      }
+    },
+    {
+      "objeto": "Vía Láctea",
+      "nombre": "Zona de Sagitario",
+      "titulo": "Vía Láctea – Zona de Sagitario",
+      "imagen": "https://raw.githubusercontent.com/ProyectoAstRoo/astroo-web/main/assets/fotos/Via%20L%C3%A1ctea/Milky%20way%20zona%20sagitario.jpg",
+      "telescopio": "Seestar S50 Pro con gran angular",
+      "exposicion": "30 minutos",
+      "sesiones": "1 sesión",
+      "fechas": "14 de septiembre de 2026",
+      "publicada": true
+    }
   ]
 }
