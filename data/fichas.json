@@ -526,6 +526,91 @@
         "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-1/",
         "simbad": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=Messier+1"
       }
+    },
+    {
+      "id": "NGC 7023",
+      "aliases": [
+        "NGC7023",
+        "Caldwell 4",
+        "C 4",
+        "Nebulosa Iris",
+        "Iris Nebula",
+        "LBN 487",
+        "VdB 139"
+      ],
+      "nombre": "Nebulosa Iris",
+      "catalogo": "NGC",
+      "tipo": "Nebulosa de reflexión asociada a una región de formación estelar y a un cúmulo estelar joven.",
+      "constelacion": "Cepheus (Cefeo)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "21h 01m 36.9s",
+        "declinacion": "+68° 09′ 48″",
+        "ascension_recta_grados": 315.40375,
+        "declinacion_grados": 68.163333,
+        "longitud_galactica": "l = 104.0616°",
+        "latitud_galactica": "b = +14.1926°"
+      },
+      "parametros": [
+        {
+          "nombre": "Naturaleza",
+          "valor": "Nebulosa de reflexión",
+          "detalle": "La luz visible procede principalmente de la luz de estrellas jóvenes dispersada por el polvo."
+        },
+        {
+          "nombre": "Constelación",
+          "valor": "Cefeo",
+          "detalle": "Situada en una región rica en nubes interestelares del cielo boreal."
+        },
+        {
+          "nombre": "Magnitud aparente",
+          "valor": "≈ 7,2 mag",
+          "detalle": "Valor aproximado recopilado en catálogos; la nebulosa es extensa y su brillo superficial es bajo."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "≈ 10′",
+          "detalle": "Valor aproximado; la extensión aparente depende del contraste y de la longitud de onda."
+        },
+        {
+          "nombre": "Identificadores",
+          "valor": "Caldwell 4 · VdB 139",
+          "detalle": "También se conoce como Nebulosa Iris."
+        }
+      ],
+      "estructura": "NGC 7023, conocida como Nebulosa Iris, es una nebulosa de reflexión en la constelación de Cefeo. El polvo interestelar dispersa la luz de estrellas jóvenes cercanas y produce el característico aspecto azulado en imágenes de luz visible. En torno a la región iluminada se extienden nubes de polvo más oscuras, que forman un contraste marcado con la nebulosidad brillante.",
+      "fisica": "El mecanismo dominante de la emisión óptica visible es la dispersión de la luz estelar por granos de polvo. La radiación de las estrellas jóvenes también modifica la química y la temperatura del material circundante, dando lugar a una región de fotodisociación que se estudia especialmente en el infrarrojo.",
+      "entorno": "La nebulosa se encuentra en una región de formación estelar de Cefeo. SIMBAD identifica NGC 7023 como un cúmulo abierto y recoge varios identificadores asociados, entre ellos la designación popular Iris Nebula y VdB 139. La descripción de la región depende del catálogo y del componente observado.",
+      "interes": "NGC 7023 es un laboratorio para estudiar la interacción entre radiación estelar y polvo interestelar. Su estructura permite analizar la dispersión de la luz, las propiedades de los granos de polvo y la evolución del material en regiones iluminadas por estrellas jóvenes.",
+      "observacion": "La Nebulosa Iris se localiza en Cefeo. Aunque su magnitud integrada puede parecer favorable, gran parte de su estructura es nebulosa difusa y de bajo brillo superficial. Un cielo oscuro y una integración prolongada ayudan a registrar tanto la zona azul iluminada como las nubes oscuras que la rodean.",
+      "captura": {
+        "equipo": "Seestar S50 Pro",
+        "integracion": "450 min",
+        "sesiones": "3 noches",
+        "fechas": "1, 2 y 5 de noviembre de 2026",
+        "lugar": "Villarcayo",
+        "nota": "Fotografía de AstRoo realizada durante tres noches."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: NGC 7023",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=NGC+7023",
+          "nota": "Coordenadas ICRS J2000, coordenadas galácticas e identificadores del objeto."
+        },
+        {
+          "autores": "OpenNGC / Mattia Verga",
+          "titulo": "OpenNGC catalogue",
+          "publicacion": "Catálogo NGC/IC, licencia CC BY-SA 4.0",
+          "url": "https://github.com/mattiaverga/OpenNGC",
+          "nota": "Datos de catálogo complementarios para identificación y clasificación."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=NGC+7023",
+        "opengc": "https://github.com/mattiaverga/OpenNGC"
+      }
     }
   ]
 }
