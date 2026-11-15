@@ -66,12 +66,12 @@ async function init(){
      <div><p><b>Longitud galáctica:</b> ${esc(ficha.coordenadas?.longitud_galactica)}</p><p><b>Latitud galáctica:</b> ${esc(ficha.coordenadas?.latitud_galactica)}</p></div>
     </div><p class="small">Sistema de coordenadas: ${esc(ficha.coordenadas?.sistema)}</p>
    </section>
-   ${norm(ficha.id)==='m33'?`<section class="panel sky-map-panel" id="localizacion-cielo">
+   <section class="panel sky-map-panel" id="localizacion-cielo">
     <h2>Localización en el cielo</h2>
     <p class="small">Carta celeste interactiva centrada en la posición del objeto. Puedes ampliar, reducir y desplazarte por el campo.</p>
     <div id="astroo-aladin-map" class="sky-map" role="img" aria-label="Carta celeste interactiva"></div>
     <p class="sky-map-note">Carta generada con Aladin Lite · CDS, Strasbourg. La retícula central indica la posición del objeto.</p>
-   </section>`:''}
+   </section>
    <section class="panel"><h2>Parámetros físicos y observacionales</h2><dl class="params">${phtml}</dl></section>
    <section class="panel"><h2>Morfología y estructura</h2><p>${esc(ficha.estructura)}</p></section>
    <section class="panel"><h2>Procesos astrofísicos</h2><p>${esc(ficha.fisica)}</p></section>
