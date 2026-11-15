@@ -215,15 +215,26 @@ selectEquipmentTab(selectedEquipmentTab);
 const search=document.getElementById('catalog-search');
 let gallerySearchQuery='';
 function updateCatalogSearch(){
-  const q=search.value.trim().toLowerCase();
-  let count=0;
-  document.querySelectorAll('.catalog').forEach(card=>{
-    const matches=!q||(card.dataset.search+' '+card.innerText).toLowerCase().includes(q);
-    card.hidden=!matches;
-    if(matches)count++;
+  const q=normalizeSearch(search.value);
+  const cards=[...document.querySelectorAll('.catalog')];
+  const matchingCards=cards.filter(card=>
+    !q||normalizeSearch((card.dataset.search||'')+' '+card.innerText).includes(q)
+  );
+  // Si la consulta no coincide con una tarjeta de catálogo, se interpreta
+  // como búsqueda de objeto y no se ocultan los catálogos.
+  const isCatalogQuery=!q||matchingCards.length>0;
+  cards.forEach(card=>{
+    card.hidden=isCatalogQuery && q ? !matchingCards.includes(card) : false;
   });
   const counter=document.getElementById('filter-count');
-  if(counter)counter.textContent=count+(document.documentElement.lang==='es'?' catálogos':' catalogues');
+  if(counter){
+    if(isCatalogQuery){
+      counter.textContent=(q?matchingCards.length:cards.length)+(document.documentElement.lang==='es'?' catálogos':' catalogues');
+    }else{
+      const matches=astrooPhotos.filter(photo=>photo.publicada!==false&&matchesAstrooPhoto(photo,q)).length;
+      counter.textContent=matches+(document.documentElement.lang==='es'?' objetos':' objects');
+    }
+  }
 }
 search.addEventListener('input',()=>{
   gallerySearchQuery=search.value.trim();
@@ -354,6 +365,7 @@ async function loadAstrooGallery(){
     if(!response.ok)throw new Error('No se pudo cargar el catálogo');
     const data=await response.json();
     astrooPhotos=data.fotografias||[];
+    updateCatalogSearch();
     renderAstrooGallery();
   }catch(error){
     status.textContent='No se ha podido cargar el catálogo de fotografías.';
