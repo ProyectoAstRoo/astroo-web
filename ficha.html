@@ -87,7 +87,13 @@ async function init(){
    <a class="back" href="./index.html#galeria">← Volver a la galería</a>`;
   document.title=`${ficha.id} — ${ficha.nombre} | AstRoo`;
   // Inicialización de Aladin Lite mediante el módulo oficial servido por jsDelivr.
-  const sky = photo?.localizacionCielo;
+  // Prioriza las coordenadas científicas de fichas.json; conserva el
+  // sistema anterior como respaldo para fichas que aún no tengan grados decimales.
+  const fichaRA = Number(ficha.coordenadas?.ascension_recta_grados);
+  const fichaDec = Number(ficha.coordenadas?.declinacion_grados);
+  const sky = Number.isFinite(fichaRA) && Number.isFinite(fichaDec)
+    ? { ra: fichaRA, dec: fichaDec }
+    : photo?.localizacionCielo;
   const mapHost = document.getElementById('astroo-aladin-map');
   if (sky && Number.isFinite(Number(sky.ra)) && Number.isFinite(Number(sky.dec)) && mapHost) {
     const createMap = () => {
