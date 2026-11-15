@@ -22,6 +22,18 @@
       "imagen": "images/sistema-solar/sol/02-04-2026.jpg",
       "alt": "Fotografía del Sol realizada con telescopio ACUTER de 40 mm en H-alfa",
       "publicado": true
+    },
+    {
+      "id": "sol-20260328-0855",
+      "titulo": "Sol en H-alfa",
+      "subtitulo": "28 de marzo de 2026 · 08:55 h",
+      "categoria": "H-alfa",
+      "fecha": "2026-03-28",
+      "hora": "08:55",
+      "telescopio": "ACUTER 40 mm H-alfa",
+      "imagen": "images/sistema-solar/sol/2026-03-28-0855_9-H-Alfa_lapl2_ap299-enhancedcolor_final_web.jpg",
+      "alt": "Fotografía solar en H-alfa del 28 de marzo de 2026 a las 08:55, realizada con telescopio ACUTER de 40 mm",
+      "publicado": true
     }
   ]
 }
