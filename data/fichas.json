@@ -611,6 +611,98 @@
         "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=NGC+7023",
         "opengc": "https://github.com/mattiaverga/OpenNGC"
       }
+    },
+    {
+      "id": "NGC 869/884",
+      "aliases": [
+        "NGC 869",
+        "NGC869",
+        "NGC 884",
+        "NGC884",
+        "Caldwell 14",
+        "C 14",
+        "C14",
+        "Cúmulo Doble de Perseo",
+        "Cúmulo Doble",
+        "Double Cluster",
+        "h Persei",
+        "χ Persei",
+        "h y χ Persei",
+        "h and chi Per"
+      ],
+      "nombre": "Cúmulo Doble de Perseo",
+      "catalogo": "NGC",
+      "tipo": "Pareja de cúmulos abiertos jóvenes: NGC 869 (h Persei) y NGC 884 (χ Persei).",
+      "constelacion": "Perseus (Perseo)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "02h 20m 30s",
+        "declinacion": "+57° 08′ 00″",
+        "ascension_recta_grados": 35.125,
+        "declinacion_grados": 57.133333,
+        "longitud_galactica": "l ≈ 134.8226°",
+        "latitud_galactica": "b ≈ −3.6680°"
+      },
+      "parametros": [
+        {
+          "nombre": "Naturaleza",
+          "valor": "Dos cúmulos abiertos",
+          "detalle": "NGC 869 también se conoce como h Persei y NGC 884 como χ Persei."
+        },
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 7.500 años luz",
+          "detalle": "Valor aproximado para el sistema; las distancias individuales publicadas varían según el catálogo y el método."
+        },
+        {
+          "nombre": "Tamaño angular conjunto",
+          "valor": "≈ 60′ × 30′",
+          "detalle": "Extensión aproximada del campo que ocupan ambos cúmulos; depende de los límites estelares considerados."
+        },
+        {
+          "nombre": "Edad",
+          "valor": "≈ 12–14 millones de años",
+          "detalle": "Estimación aproximada para los dos cúmulos jóvenes; las edades individuales dependen del análisis."
+        },
+        {
+          "nombre": "Designación adicional",
+          "valor": "Caldwell 14",
+          "detalle": "El Cúmulo Doble aparece como un único objeto en el catálogo Caldwell."
+        }
+      ],
+      "estructura": "El Cúmulo Doble de Perseo está formado por dos concentraciones estelares abiertas y jóvenes, NGC 869 (h Persei) y NGC 884 (χ Persei). En el cielo aparecen muy próximos y sus campos estelares se contemplan conjuntamente. Ambos contienen numerosas estrellas calientes, azuladas y luminosas, junto con estrellas de otros tipos y colores que enriquecen el contraste.",
+      "fisica": "Los dos cúmulos son asociaciones estelares jóvenes cuyos miembros se formaron en una misma región general de formación estelar. Sus estrellas masivas y calientes dominan buena parte de la luminosidad visible. El estudio de sus poblaciones permite investigar la evolución temprana de cúmulos abiertos, la distribución de masas estelares y las diferencias entre dos agrupaciones cercanas en edad y espacio.",
+      "entorno": "El sistema se encuentra en la constelación de Perseo y forma parte de la región asociada a Perseus OB1. Aunque los cúmulos se proyectan muy cerca uno del otro, son dos agrupaciones diferenciadas, con centros y propiedades propias.",
+      "interes": "Es uno de los campos de cúmulos abiertos dobles más destacados del cielo boreal. Su observación conjunta permite comparar dos poblaciones estelares jóvenes en un mismo encuadre y apreciar la riqueza de estrellas de distintos brillos y colores.",
+      "observacion": "El Cúmulo Doble se localiza en Perseo, cerca de la frontera con Casiopea. Es visible a simple vista desde cielos oscuros y resulta especialmente atractivo con prismáticos o telescopios de campo amplio. Para fotografiar ambos cúmulos conviene encuadrar con un campo suficientemente generoso para incluir sus dos concentraciones y el entorno estelar.",
+      "captura": {
+        "equipo": "Seestar S50 Pro",
+        "integracion": "87 min",
+        "sesiones": "1 noche",
+        "fechas": "30 de octubre de 2026",
+        "lugar": "Villarcayo",
+        "nota": "Fotografía de AstRoo del Cúmulo Doble de Perseo, NGC 869 y NGC 884."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: NAME NGC 869/884",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=NAME+NGC+869%2F884",
+          "nota": "Identificación del sistema y coordenadas ICRS J2000 del centro conjunto."
+        },
+        {
+          "autores": "NOIRLab / NSF / AURA",
+          "titulo": "The Double Cluster: h and chi Persei",
+          "publicacion": "NOIRLab Image Archive",
+          "url": "https://www.astropix.org/image/noirlab/noao-hcper",
+          "nota": "Contexto observacional, identificación de NGC 869 y NGC 884 y posición del campo."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=NAME+NGC+869%2F884",
+        "noirlab": "https://www.astropix.org/image/noirlab/noao-hcper"
+      }
     }
   ]
 }
