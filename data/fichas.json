@@ -109,6 +109,126 @@
         "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-33/",
         "breuval": "https://arxiv.org/abs/2304.00037"
       }
+    },
+    {
+      "id": "IC1396",
+      "aliases": [
+        "IC 1396A",
+        "IC1396A",
+        "Elephant Trunk Nebula",
+        "Nebulosa de la Trompa de Elefante",
+        "Trompa del Elefante",
+        "LBN 098.87+03.97",
+        "LBN 452"
+      ],
+      "nombre": "IC 1396A – Nebulosa de la Trompa de Elefante",
+      "catalogo": "IC",
+      "tipo": "Glóbulo cometario / nube molecular de borde brillante (BRC) situada en la región H II IC 1396; no debe confundirse la globulosa IC 1396A con el complejo completo IC 1396.",
+      "constelacion": "Cepheus (Cefeo)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0; posición catalogada para IC 1396A",
+        "ascension_recta": "21h 36m 00.0s",
+        "declinacion": "+57° 24′ 00″",
+        "longitud_galactica": "l = 98.9337°",
+        "latitud_galactica": "b = +3.9381°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia del complejo IC 1396",
+          "valor": "≈ 917 pc",
+          "detalle": "Valor adoptado en un estudio reciente del complejo a partir de Gaia DR3 (Das et al. 2023), citado por el estudio Subaru/HSC. No es una medición independiente específica de la nube IC 1396A; otras determinaciones recientes sitúan el complejo en 925 ± 73 pc."
+        },
+        {
+          "nombre": "Distancia en años luz",
+          "valor": "≈ 2 990 años luz",
+          "detalle": "Conversión de 917 pc; se ofrece como valor aproximado del complejo, no como distancia geométrica individual de la globulosa."
+        },
+        {
+          "nombre": "Coordenadas ecuatoriales",
+          "valor": "21h 36m 00.0s ; +57° 24′ 00″",
+          "detalle": "Coordenadas ICRS/J2000 catalogadas por SIMBAD para IC 1396A."
+        },
+        {
+          "nombre": "Coordenadas galácticas",
+          "valor": "l = 98.9337° ; b = +3.9381°",
+          "detalle": "Coordenadas catalogadas por SIMBAD para IC 1396A."
+        },
+        {
+          "nombre": "Tamaño angular de la nube principal",
+          "valor": "≈ 5.4′",
+          "detalle": "La literatura describe una nube oscura principal de unos 5.4 minutos de arco; el tamaño depende de qué parte de la estructura cometaria se delimite."
+        },
+        {
+          "nombre": "Tamaño lineal característico",
+          "valor": "≈ 1.4 pc",
+          "detalle": "Estimación publicada para la nube principal a una distancia de unos 870 pc; no representa la extensión de toda la región H II IC 1396."
+        },
+        {
+          "nombre": "Estrella ionizante dominante del complejo",
+          "valor": "HD 206267 (sistema O6.5V)",
+          "detalle": "Sistema estelar masivo en el cúmulo Trumpler 37; su radiación ultravioleta domina la excitación de la región H II y la iluminación del borde de IC 1396A."
+        }
+      ],
+      "estructura": "IC 1396 es una extensa región H II de la asociación Cep OB2, mientras que IC 1396A es uno de sus glóbulos cometarios de borde brillante (bright-rimmed cloud, BRC). La nube presenta una cabeza densa y una cola orientada aproximadamente en sentido opuesto a la fuente de radiación ionizante. La radiación ultravioleta de HD 206267 produce una envoltura ionizada brillante en el lado expuesto y una región de fotodisociación (PDR) en la interfaz entre el gas ionizado y el material molecular. La denominación popular “Trompa de Elefante” se aplica a esta estructura de nube, no a toda la región IC 1396.",
+      "fisica": "La interacción entre la radiación ultravioleta, los vientos estelares y el gas molecular produce fotoevaporación, compresión y flujos en la superficie de la nube. La compresión de un glóbulo por la presión de la región H II puede desencadenar implosión inducida por radiación (radiation-driven implosion, RDI). En IC 1396A se han identificado objetos estelares jóvenes y gradientes espaciales/temporales compatibles con formación estelar inducida; la interpretación y la fracción atribuible al disparo deben presentarse como resultados de modelos y estudios concretos, no como causalidad demostrada para cada estrella.",
+      "entorno": "IC 1396 forma parte de la asociación Cepheus OB2 y está asociada al cúmulo joven Trumpler 37. La estrella masiva HD 206267, de tipo espectral aproximado O6.5V, es la principal fuente de fotones ionizantes. IC 1396A se encuentra en el borde de la región H II, a una distancia proyectada de varios parsecs de la estrella excitadora. El complejo contiene numerosos glóbulos y nubes de borde brillante, por lo que constituye un laboratorio para estudiar la evolución de nubes moleculares bajo retroalimentación de estrellas masivas.",
+      "interes": "IC 1396A es uno de los ejemplos clásicos para investigar la posible formación estelar inducida por radiación en nubes de borde brillante. Los estudios combinan rayos X (Chandra), infrarrojo (Spitzer), óptico y observaciones moleculares para identificar estrellas jóvenes, discos circumestelares, protoestrellas y la estructura del gas. Getman et al. (2012) identificaron una población amplia de objetos estelares jóvenes y argumentaron que la implosión inducida por radiación puede haber contribuido a la formación estelar en la nube. Estudios posteriores en [C II], [O I] y líneas moleculares permiten caracterizar la fotodisociación, el calentamiento y la cinemática de la interfaz.",
+      "observacion": "La Trompa de Elefante es especialmente llamativa en imágenes de banda estrecha Hα y en composiciones que combinan emisión óptica e infrarroja. La silueta oscura de la nube molecular contrasta con el gas ionizado del fondo, mientras que el borde orientado hacia HD 206267 aparece iluminado. Para fotografía de campo amplio conviene incluir contexto suficiente para mostrar la relación entre la globulosa y la nebulosidad circundante; para primeros planos, la estructura de la cabeza y la cola requiere buena resolución y condiciones atmosféricas estables.",
+      "captura": {
+        "equipo": "Seestar S50 Pro",
+        "integracion": "210 min",
+        "sesiones": "No especificado en el catálogo fotográfico",
+        "fechas": "13 de septiembre de 2026",
+        "lugar": "No especificado en el catálogo fotográfico",
+        "nota": "Datos de captura tomados de la entrada IC 1396 del catálogo fotográfico de AstRoo. La ficha científica se centra en IC 1396A, la globulosa conocida como Trompa de Elefante, dentro del complejo IC 1396."
+      },
+      "referencias": [
+        {
+          "autores": "Getman, K. V. et al. (2012)",
+          "titulo": "The Elephant Trunk Nebula and the Trumpler 37 cluster: contribution of triggered star formation to the total population of an HII region",
+          "publicacion": "Monthly Notices of the Royal Astronomical Society, 426, 2917–2943",
+          "doi": "10.1111/j.1365-2966.2012.21879.x",
+          "url": "https://academic.oup.com/mnras/article/426/4/2917/1014068",
+          "nota": "Estudio de población estelar joven y formación estelar posiblemente inducida en IC 1396A."
+        },
+        {
+          "autores": "Schneider, N. et al. (2024)",
+          "titulo": "Dynamics and photodissociation region properties in IC 1396A",
+          "publicacion": "Astronomy & Astrophysics, 690, A45 (2024)",
+          "url": "https://www.aanda.org/articles/aa/pdf/2024/10/aa49397-24.pdf",
+          "nota": "Análisis de la estructura dinámica y de la región de fotodisociación; contextualiza la distancia del complejo IC 1396."
+        },
+        {
+          "autores": "Das, S. et al. (2023)",
+          "titulo": "[Estudio de distancia y propiedades de IC 1396 citado por trabajos posteriores]",
+          "publicacion": "MNRAS, 520, 1390 (2023)",
+          "url": "https://ui.adsabs.harvard.edu/abs/2023MNRAS.520.1390S/abstract",
+          "nota": "SIMBAD compila para el cúmulo IC 1396 una distancia de 904.25 ± 23.60 pc atribuida a esta referencia; un estudio posterior adopta 917 pc con Gaia DR3. Se debe consultar el artículo para precisar muestra y método antes de tratarlo como distancia de IC 1396A."
+        },
+        {
+          "autores": "SIMBAD / CDS",
+          "titulo": "SIMBAD Astronomical Database: IC 1396A",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=IC+1396A",
+          "nota": "Identificación, coordenadas ICRS/J2000 y coordenadas galácticas de IC 1396A."
+        },
+        {
+          "autores": "Mackey, J. & Lim, A. J. (2010)",
+          "titulo": "Dynamical models for the formation of elephant trunks in H II regions",
+          "publicacion": "Monthly Notices of the Royal Astronomical Society, 403, 714–730",
+          "doi": "10.1111/j.1365-2966.2009.16181.x",
+          "url": "https://academic.oup.com/mnras/article/403/2/714/1181572",
+          "nota": "Modelos hidrodinámicos de formación y evolución de estructuras tipo trompa en regiones H II."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=IC+1396A",
+        "ned": "https://ned.ipac.caltech.edu/",
+        "ads": "https://ui.adsabs.harvard.edu/",
+        "vizier": "https://vizier.cds.unistra.fr/",
+        "gaia": "https://www.cosmos.esa.int/web/gaia/dr3",
+        "aanda_2024": "https://www.aanda.org/articles/aa/pdf/2024/10/aa49397-24.pdf"
+      }
     }
   ]
 }
