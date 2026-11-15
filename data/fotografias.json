@@ -274,6 +274,17 @@
       "fechas": "Del 21 al 26 de enero de 2026",
       "lugar": "Kilpisjärvi, Finlandia",
       "notas": "Fotografía de auroras boreales realizada durante el viaje al norte de Europa."
+    },
+    {
+      "objeto": "Auroras boreales",
+      "nombre": "Auroras Boreales a 25 grados bajo cero",
+      "titulo": "Auroras Boreales a 25 grados bajo cero",
+      "catalogo": "Otros",
+      "imagen": "./assets/fotos/Otras/Roo_Aurora_1_firma_web.jpg",
+      "alt": "Fotografía de auroras boreales a 25 grados bajo cero en la carretera de Tromsø a Kilpisjärvi, del 21 al 26 de enero de 2026",
+      "fechas": "Del 21 al 26 de enero de 2026",
+      "lugar": "Carretera de Tromsø a Kilpisjärvi",
+      "notas": "Fotografía de auroras boreales realizada a 25 grados bajo cero durante el trayecto de Tromsø a Kilpisjärvi."
     }
   ]
 }
