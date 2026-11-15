@@ -114,6 +114,29 @@
         "constelacion": "Taurus",
         "constelacionEs": "Tauro"
       }
+    },
+    {
+      "objeto": "NGC 7023",
+      "nombre": "Nebulosa Iris",
+      "titulo": "NGC 7023 — Nebulosa Iris",
+      "catalogo": "NGC",
+      "imagen": "./assets/fotos/NGC/NGC7023_S50P_1-11-2026_450m_3n_final_web.jpg",
+      "alt": "Fotografía de NGC 7023, la Nebulosa Iris, realizada con Seestar S50 Pro",
+      "telescopio": "Seestar S50 Pro",
+      "exposicion": "450 min",
+      "sesiones": "3 noches",
+      "fechas": "1, 2 y 5 de noviembre de 2026",
+      "lugar": "Villarcayo",
+      "notas": "Fotografía realizada durante tres noches.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 315.40375,
+        "dec": 68.163333,
+        "raTexto": "21h 01m 36.9s",
+        "decTexto": "+68° 09′ 48″",
+        "constelacion": "Cepheus",
+        "constelacionEs": "Cefeo"
+      }
     }
   ]
 }
