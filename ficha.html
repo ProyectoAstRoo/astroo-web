@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ficha astronómica | AstRoo</title>
+<style>
+@font-face{font-family:Nasalization;src:url('./assets/Nasalization-Rg.otf') format('opentype');font-display:swap}
+:root{--bg:#080d19;--bg2:#0b1423;--panel:#101b2c;--ink:#f1f5fa;--muted:#aab8c9;--blue:#69b8f2;--line:rgba(190,215,240,.15);--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 Arial,Helvetica,sans-serif}
+a{color:#91cafa;text-decoration:none}a:hover{color:#fff}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{border-bottom:1px solid var(--line);background:rgba(8,13,25,.94);padding:18px 0}
+.brand{font:20px Nasalization,Arial,sans-serif;color:#fff;letter-spacing:.04em}
+.back{display:inline-block;margin-top:10px;font-size:12px}
+main{padding:38px 0 70px}.eyebrow{font:11px Nasalization,Arial,sans-serif;letter-spacing:.12em;color:var(--blue);text-transform:uppercase}
+h1,h2,h3{font-family:Nasalization,Arial,sans-serif;font-weight:400;line-height:1.35}h1{font-size:clamp(28px,5vw,46px);margin:8px 0}h2{font-size:20px;margin:0 0 15px}h3{font-size:15px}
+.lead{color:var(--muted);margin:0 0 24px}.hero-image{width:100%;max-height:520px;object-fit:contain;background:#050912;border:1px solid var(--line);border-radius:14px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0}.panel{background:linear-gradient(145deg,#101d30,#0b1422);border:1px solid var(--line);border-radius:13px;padding:22px;margin:18px 0}
+dl.params{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}
+.param{padding:13px;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.015)}dt{color:var(--muted);font-size:11px;margin-bottom:5px}.value{font:16px Nasalization,Arial,sans-serif;color:#fff}.detail{font-size:12px;color:var(--muted);margin-top:5px}
+p{color:#d5deea;margin:0 0 12px}.small{font-size:12px;color:var(--muted)}
+ul{padding-left:20px;color:#d5deea}li{margin:8px 0}.ref{padding:13px 0;border-top:1px solid var(--line)}.ref:first-child{border-top:0}.ref strong{display:block;color:#fff}.tag{display:inline-block;border:1px solid var(--line);padding:4px 9px;border-radius:20px;color:var(--muted);font-size:11px;margin:4px 5px 0 0}
+footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:11px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.panel{padding:17px}dl.params{grid-template-columns:1fr}main{padding-top:25px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">AstRoo</div><a class="back" href="./index.html#galeria">← Volver a la galería</a></div></header>
+<main class="wrap" id="content"><p>Cargando ficha astronómica…</p></main>
+<footer><div class="wrap">AstRoo · Archivo de astrofotografía y documentación astronómica. Los parámetros se muestran con sus fuentes y notas metodológicas.</div></footer>
+<script>
+const params=new URLSearchParams(location.search);
+const requested=(params.get('objeto')||'').trim().toLowerCase();
+const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim();
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function init(){
+ const host=document.getElementById('content');
+ try{
+  const [r1,r2]=await Promise.all([fetch('./data/fichas.json',{cache:'no-store'}),fetch('./data/fotografias.json',{cache:'no-store'})]);
+  if(!r1.ok)throw new Error('No se pudo cargar data/fichas.json');
+  const db=await r1.json();const photos=r2.ok?(await r2.json()).fotografias||[]:[];
+  const ficha=(db.fichas||[]).find(f=>[f.id,...(f.aliases||[])].some(a=>norm(a)===norm(requested)));
+  if(!ficha){host.innerHTML='<section class="panel"><h1>Ficha no encontrada</h1><p>No hay una ficha científica publicada para este identificador.</p><a href="./index.html#galeria">Volver a la galería</a></section>';return;}
+  const photo=photos.find(p=>norm(p.objeto)===norm(ficha.id));
+  const phtml=(ficha.parametros||[]).map(p=>`<div class="param"><dt>${esc(p.nombre)}</dt><div class="value">${esc(p.valor)}</div>${p.detalle?`<div class="detail">${esc(p.detalle)}</div>`:''}</div>`).join('');
+  const refs=(ficha.referencias||[]).map(r=>`<div class="ref"><strong>${esc(r.autores)}</strong><p>${esc(r.titulo)}</p><div class="small">${esc(r.publicacion||'')}${r.doi?' · DOI: '+esc(r.doi):''}</div>${r.nota?`<p class="small">${esc(r.nota)}</p>`:''}<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">Consultar fuente ↗</a></div>`).join('');
+  const capture=ficha.captura||{};
+  host.innerHTML=`
+   <div class="eyebrow">${esc(ficha.catalogo||'Objeto astronómico')} · Ficha científica</div>
+   <h1>${esc(ficha.id)} — ${esc(ficha.nombre)}</h1>
+   <p class="lead">${esc(ficha.tipo)} · ${esc(ficha.constelacion)}</p>
+   ${photo?.imagen?`<img class="hero-image" src="${esc(photo.imagen)}" alt="${esc(photo.alt||ficha.nombre)}">`:''}
+   <div>${(ficha.aliases||[]).map(a=>`<span class="tag">${esc(a)}</span>`).join('')}</div>
+   <section class="panel"><h2>Identificación y posición</h2>
+    <div class="grid">
+     <div><p><b>Ascensión recta:</b> ${esc(ficha.coordenadas?.ascension_recta)}</p><p><b>Declinación:</b> ${esc(ficha.coordenadas?.declinacion)}</p></div>
+     <div><p><b>Longitud galáctica:</b> ${esc(ficha.coordenadas?.longitud_galactica)}</p><p><b>Latitud galáctica:</b> ${esc(ficha.coordenadas?.latitud_galactica)}</p></div>
+    </div><p class="small">Sistema de coordenadas: ${esc(ficha.coordenadas?.sistema)}</p>
+   </section>
+   <section class="panel"><h2>Parámetros físicos y observacionales</h2><dl class="params">${phtml}</dl></section>
+   <section class="panel"><h2>Morfología y estructura</h2><p>${esc(ficha.estructura)}</p></section>
+   <section class="panel"><h2>Procesos astrofísicos</h2><p>${esc(ficha.fisica)}</p></section>
+   <section class="panel"><h2>Entorno y evolución</h2><p>${esc(ficha.entorno)}</p></section>
+   <section class="panel"><h2>Interés científico</h2><p>${esc(ficha.interes)}</p></section>
+   <section class="panel"><h2>Observación</h2><p>${esc(ficha.observacion)}</p></section>
+   <section class="panel"><h2>Astrofotografía AstRoo</h2>
+    <div class="grid"><div><p><b>Instrumento:</b> ${esc(capture.equipo||photo?.telescopio||'—')}</p><p><b>Integración:</b> ${esc(capture.integracion||photo?.exposicion||'—')}</p><p><b>Sesiones:</b> ${esc(capture.sesiones||photo?.sesiones||'—')}</p></div>
+    <div><p><b>Fechas:</b> ${esc(capture.fechas||photo?.fechas||'—')}</p><p><b>Lugar:</b> ${esc(capture.lugar||photo?.lugar||'—')}</p></div></div><p>${esc(capture.nota||'')}</p>
+   </section>
+   <section class="panel"><h2>Referencias y bibliografía</h2>${refs}</section>
+   <p class="small">Los valores derivados se identifican como estimaciones. Las cifras dependen de la definición observacional, la banda fotométrica y el método de medida; consulta las referencias para su contexto.</p>
+   <a class="back" href="./index.html#galeria">← Volver a la galería</a>`;
+  document.title=`${ficha.id} — ${ficha.nombre} | AstRoo`;
+ }catch(e){console.error(e);host.innerHTML='<section class="panel"><h1>No se pudo cargar la ficha</h1><p>Comprueba que los archivos de datos están publicados en la carpeta data.</p><a href="./index.html#galeria">Volver a la galería</a></section>';}
+}
+init();
+</script>
+</body></html>

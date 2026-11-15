@@ -49,6 +49,10 @@ body.lightbox-open{overflow:hidden}
 .about-panel[hidden]{display:none}
 .about-copy p{margin:0 0 15px}.about-copy p{text-align:justify;text-justify:inter-word}
 
+
+.ficha-link{display:inline-flex;align-items:center;gap:7px;margin-top:12px;padding:8px 12px;border:1px solid rgba(105,184,242,.38);border-radius:8px;color:#9bd0fa;font-size:11px;letter-spacing:.02em;transition:.2s}
+.ficha-link:hover{background:rgba(50,135,199,.14);border-color:#69b8f2;color:#fff}
+
 </style>
 </head>
 <body>
@@ -260,6 +264,7 @@ search.addEventListener('input',()=>{
 });
 
 let astrooPhotos = [];
+let astrooFichaIds = new Set();
 let selectedCatalog = 'all';
 
 function normalizeSearch(value){
@@ -354,7 +359,15 @@ function renderAstrooGallery(){
       info.appendChild(notes);
     }
 
-    article.append(picture,info);grid.appendChild(article);
+    article.append(picture,info);
+    if(astrooFichaIds.has(String(photo.objeto||'').trim().toLowerCase())){
+      const fichaLink=document.createElement('a');
+      fichaLink.className='ficha-link';
+      fichaLink.href='./ficha.html?objeto='+encodeURIComponent(photo.objeto||'');
+      fichaLink.textContent=(document.documentElement.lang==='en'?'Scientific profile →':'Consultar ficha astronómica →');
+      article.appendChild(fichaLink);
+    }
+    grid.appendChild(article);
   });
 
   status.textContent=photos.length
@@ -377,10 +390,17 @@ document.querySelectorAll('.catalog[data-catalog]').forEach(card=>{
 async function loadAstrooGallery(){
   const status=document.getElementById('gallery-status');
   try{
-    const response=await fetch('./data/fotografias.json',{cache:'no-store'});
+    const [response,fichaResponse]=await Promise.all([
+      fetch('./data/fotografias.json',{cache:'no-store'}),
+      fetch('./data/fichas.json',{cache:'no-store'})
+    ]);
     if(!response.ok)throw new Error('No se pudo cargar el catálogo');
     const data=await response.json();
     astrooPhotos=data.fotografias||[];
+    if(fichaResponse.ok){
+      const fichaData=await fichaResponse.json();
+      astrooFichaIds=new Set((fichaData.fichas||[]).map(f=>String(f.id||'').trim().toLowerCase()));
+    }
     updateCatalogSearch();
     renderAstrooGallery();
   }catch(error){
