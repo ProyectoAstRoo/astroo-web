@@ -703,6 +703,88 @@
         "simbad": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=NAME+NGC+869%2F884",
         "noirlab": "https://www.astropix.org/image/noirlab/noao-hcper"
       }
+    },
+    {
+      "id": "SH2-115",
+      "aliases": [
+        "Sh 2-115",
+        "Sharpless 115",
+        "LBN 357",
+        "3C 416.1"
+      ],
+      "nombre": "Nebulosa de emisión SH2-115",
+      "catalogo": "Sharpless",
+      "tipo": "Nebulosa de emisión y región H II.",
+      "constelacion": "Cygnus (Cisne)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "20h 35m 02.0s",
+        "declinacion": "+47° 02′ 24″",
+        "ascension_recta_grados": 308.758333,
+        "declinacion_grados": 47.04,
+        "longitud_galactica": "l = 85.0164°",
+        "latitud_galactica": "b = +3.9443°"
+      },
+      "parametros": [
+        {
+          "nombre": "Naturaleza",
+          "valor": "Región H II",
+          "detalle": "Nube de gas ionizado que emite radiación, catalogada como región H II en SIMBAD."
+        },
+        {
+          "nombre": "Tipo de nebulosa",
+          "valor": "Nebulosa de emisión",
+          "detalle": "Su brillo se debe principalmente a la emisión del gas ionizado."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "≈ 50′",
+          "detalle": "Diámetro aproximado recogido en catálogos de observación; el límite aparente depende de la sensibilidad y del filtro."
+        },
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 2,3–3,0 kpc",
+          "detalle": "Estimaciones publicadas no idénticas; se ofrece como intervalo orientativo, no como una distancia de precisión."
+        },
+        {
+          "nombre": "Otros identificadores",
+          "valor": "LBN 357 · 3C 416.1",
+          "detalle": "Designaciones alternativas recogidas en bases de datos astronómicas."
+        }
+      ],
+      "estructura": "SH2-115 es una región H II situada en la constelación del Cisne. Está formada por gas interestelar ionizado y se observa como una nebulosa de emisión extensa. La región se encuentra asociada al cúmulo estelar Berkeley 90, cuyas estrellas jóvenes y calientes contribuyen a ionizar el gas circundante.",
+      "fisica": "La radiación ultravioleta de estrellas masivas ioniza el hidrógeno del medio interestelar. Cuando los electrones se recombinan con los protones y el gas experimenta transiciones atómicas, se producen líneas de emisión, entre ellas H-alfa. La morfología observada refleja la distribución del gas, el polvo y las fuentes de ionización de la región.",
+      "entorno": "SH2-115 forma parte de un complejo de formación estelar en el Cisne. En la región se encuentra el cúmulo abierto Berkeley 90, asociado a estrellas de tipo O que proporcionan una fuente energética importante para la ionización de la nebulosa. En el mismo campo amplio puede aparecer la nebulosa planetaria Abell 71 (SH2-116), que es un objeto distinto.",
+      "interes": "Esta región permite estudiar la interacción entre estrellas masivas jóvenes y el medio interestelar. La combinación de emisión H-alfa, polvo y cúmulos estelares ofrece información sobre la estructura de las regiones H II y los procesos de formación estelar.",
+      "observacion": "SH2-115 se localiza en el Cisne, en una zona rica en nebulosas y campos estelares. Es un objeto extenso y de bajo brillo superficial, por lo que resulta adecuado para fotografía de cielo profundo con filtros de banda estrecha, especialmente H-alfa. Conviene distinguirla de la pequeña nebulosa planetaria Abell 71 (SH2-116), situada en sus proximidades aparentes.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "260 min",
+        "sesiones": "1 noche",
+        "fechas": "9 de julio de 2026",
+        "lugar": "Ribas de la Valduerna",
+        "nota": "Fotografía de AstRoo realizada durante una sesión."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: Sh2-115",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=Sh2-115",
+          "nota": "Tipo de objeto, coordenadas ICRS J2000, coordenadas galácticas e identificadores alternativos."
+        },
+        {
+          "autores": "The Sharpless Observing Atlas",
+          "titulo": "Sh 2-115 in Cygnus",
+          "publicacion": "Sharpless Observing Atlas",
+          "url": "https://www.astromaster.org/oggetti/sharpless_data/Sharpless_r.pdf",
+          "nota": "Tamaño angular aproximado y contexto de la región de formación estelar asociada a Berkeley 90."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=Sh2-115",
+        "sharpless_atlas": "https://www.astromaster.org/oggetti/sharpless_data/Sharpless_r.pdf"
+      }
     }
   ]
 }
