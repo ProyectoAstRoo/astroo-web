@@ -27,9 +27,11 @@ footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-s
 @media(max-width:700px){.sky-map-panel .sky-map{height:340px;min-height:300px}}
 \n@media(max-width:700px){.grid{grid-template-columns:1fr}.panel{padding:17px}dl.params{grid-template-columns:1fr}main{padding-top:25px}}
 </style>
-<link rel="stylesheet" href="https://aladin.cds.unistra.fr/AladinLite/api/v3/latest/aladin.css">
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-<script src="https://aladin.cds.unistra.fr/AladinLite/api/v3/latest/aladin.js" charset="utf-8"></script>
+<script type="module">
+import Aladin from "https://cdn.jsdelivr.net/npm/aladin-lite@3.9.2-beta/dist/aladin.js";
+window.A = Aladin;
+window.dispatchEvent(new Event("astroo-aladin-ready"));
+</script>
 </head>
 <body>
 <header><div class="wrap"><div class="brand">AstRoo</div><a class="back" href="./index.html#galeria">← Volver a la galería</a></div></header>
@@ -84,13 +86,18 @@ async function init(){
    <p class="small">Los valores derivados se identifican como estimaciones. Las cifras dependen de la definición observacional, la banda fotométrica y el método de medida; consulta las referencias para su contexto.</p>
    <a class="back" href="./index.html#galeria">← Volver a la galería</a>`;
   document.title=`${ficha.id} — ${ficha.nombre} | AstRoo`;
-  // Aladin Lite: usa las coordenadas de localizacionCielo del catálogo fotográfico.
+  // Inicialización de Aladin Lite mediante el módulo oficial servido por jsDelivr.
   const sky = photo?.localizacionCielo;
   const mapHost = document.getElementById('astroo-aladin-map');
   if (sky && Number.isFinite(Number(sky.ra)) && Number.isFinite(Number(sky.dec)) && mapHost) {
-    if (window.A && window.A.init) {
+    const createMap = () => {
+      if (!window.A || !window.A.init) {
+        mapHost.innerHTML = '<p style="padding:18px;color:#aab8c9">No se ha podido iniciar Aladin Lite.</p>';
+        return;
+      }
       window.A.init.then(() => {
-        if (!document.getElementById('astroo-aladin-map')) return;
+        const host = document.getElementById('astroo-aladin-map');
+        if (!host) return;
         const fov = norm(ficha.id) === 'm33' ? 8 : 5;
         window.A.aladin('#astroo-aladin-map', {
           target: `${Number(sky.ra)} ${Number(sky.dec)}`,
@@ -107,11 +114,14 @@ async function init(){
         });
       }).catch(err => {
         console.error('No se pudo iniciar Aladin Lite:', err);
-        mapHost.innerHTML = '<p style="padding:18px;color:#aab8c9">No se pudo cargar la carta celeste. Comprueba la conexión a Internet.</p>';
+        mapHost.innerHTML = '<p style="padding:18px;color:#aab8c9">No se pudo iniciar la carta celeste. Comprueba la conexión.</p>';
       });
-    } else {
-      mapHost.innerHTML = '<p style="padding:18px;color:#aab8c9">Aladin Lite no está disponible. Comprueba la conexión a Internet.</p>';
-    }
+    };
+    if (window.A) createMap();
+    else window.addEventListener('astroo-aladin-ready', createMap, { once: true });
+    setTimeout(() => {
+      if (!window.A && mapHost) mapHost.innerHTML = '<p style="padding:18px;color:#aab8c9">No se pudo cargar Aladin Lite desde jsDelivr.</p>';
+    }, 10000);
   } else if (mapHost) {
     mapHost.innerHTML = '<p style="padding:18px;color:#aab8c9">No hay coordenadas de localización disponibles para este objeto.</p>';
   }
