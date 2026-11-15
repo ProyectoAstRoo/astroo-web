@@ -928,6 +928,92 @@
       "fuentes_urls": {
         "simbad": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=NGC+5033"
       }
+    },
+    {
+      "id": "M2",
+      "aliases": [
+        "M 2",
+        "Messier 2",
+        "NGC 7089",
+        "C 2130-010",
+        "GCl 121"
+      ],
+      "nombre": "Cúmulo globular M2",
+      "catalogo": "Messier",
+      "tipo": "Cúmulo globular (GlC); clase de concentración II",
+      "constelacion": "Aquarius (Acuario)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "21h 33m 27.02s",
+        "declinacion": "−00° 49′ 23.7″",
+        "longitud_galactica": "l = 53.37088°",
+        "latitud_galactica": "b = −35.76976°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 37.000 años luz",
+          "detalle": "Valor redondeado publicado por NASA; las determinaciones de distancia pueden variar según el método y los datos adoptados."
+        },
+        {
+          "nombre": "Magnitud aparente visual",
+          "valor": "V ≈ 6.25 mag",
+          "detalle": "Valor fotométrico recopilado por SIMBAD; NASA publica 6.3 mag."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "12.9′",
+          "detalle": "Diámetro angular catalogado en SIMBAD; otras fuentes usan límites aparentes algo mayores."
+        },
+        {
+          "nombre": "Diámetro físico",
+          "valor": "> 150 años luz",
+          "detalle": "NASA indica un diámetro superior a 150 años luz."
+        },
+        {
+          "nombre": "Velocidad radial",
+          "valor": "−3.6 ± 0.3 km s⁻¹",
+          "detalle": "Valor espectroscópico recopilado por SIMBAD; el signo negativo indica aproximación en la convención heliocéntrica."
+        },
+        {
+          "nombre": "Corrimiento al rojo",
+          "valor": "z = −0.000012 ± 0.000001",
+          "detalle": "Valor espectroscópico recopilado por SIMBAD."
+        }
+      ],
+      "estructura": "M2 (NGC 7089) es un cúmulo globular compacto y muy concentrado, formado por una población antigua de estrellas ligadas gravitatoriamente. Su estructura presenta una fuerte concentración central y una envoltura estelar extensa. Está clasificado como cúmulo globular de clase de concentración II, correspondiente a una concentración central muy elevada.",
+      "fisica": "Los cúmulos globulares son sistemas estelares antiguos que orbitan en el halo de la Vía Láctea. En M2 se han identificado más de 150.000 estrellas según la descripción de NASA/ESA/Hubble. Su población estelar permite estudiar la evolución de estrellas envejecidas y la dinámica de sistemas estelares densos. La abundancia de elementos pesados es inferior a la solar, característica habitual de los cúmulos globulares.",
+      "entorno": "M2 se encuentra en la constelación de Acuario, en el halo de la Vía Láctea. Su posición está aproximadamente cinco grados al norte de β Aquarii (Sadalsuud), una referencia útil para localizarlo visualmente.",
+      "interes": "M2 es uno de los cúmulos globulares más destacados del cielo boreal y uno de los más ricos y concentrados. Fue descubierto por Jean-Dominique Maraldi en 1746 mientras observaba un cometa; Charles Messier lo incorporó posteriormente a su catálogo. Las imágenes del telescopio espacial Hubble muestran la gran densidad estelar de su región central.",
+      "observacion": "Con una magnitud integrada cercana a 6.3, M2 está en el límite de visibilidad a simple vista bajo cielos excepcionalmente oscuros. Con prismáticos aparece como una pequeña condensación nebulosa; un telescopio permite apreciar mejor su concentración central, mientras que la resolución de estrellas individuales requiere mayor abertura y buenas condiciones atmosféricas. Es un objeto favorable para observar desde el hemisferio norte durante los meses de verano y otoño.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "30 min",
+        "sesiones": "1 sesión",
+        "fechas": "14 de septiembre de 2025",
+        "lugar": "Villarcayo",
+        "nota": "Fotografía de AstRoo del cúmulo globular Messier 2."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: M 2 (NGC 7089)",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=M+2",
+          "nota": "Tipo de objeto, identificadores, coordenadas ICRS, tamaño angular, fotometría y velocidad radial."
+        },
+        {
+          "autores": "NASA / ESA / STScI",
+          "titulo": "Messier 2",
+          "publicacion": "NASA Science — Hubble Messier Catalog",
+          "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-2/",
+          "nota": "Distancia aproximada, magnitud aparente, constelación, diámetro y población estelar."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=M+2",
+        "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-2/"
+      }
     }
   ]
 }
