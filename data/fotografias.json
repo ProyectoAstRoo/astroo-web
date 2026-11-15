@@ -206,6 +206,29 @@
         "constelacion": "Camelopardalis",
         "constelacionEs": "Jirafa"
       }
+    },
+    {
+      "objeto": "NGC 5033",
+      "nombre": "Galaxia espiral de Canes Venatici",
+      "titulo": "NGC 5033 — Galaxia espiral",
+      "catalogo": "NGC",
+      "imagen": "./assets/fotos/NGC/NGC5033_S50_31-03-2025_80m_final_web.jpg",
+      "alt": "Fotografía de la galaxia NGC 5033 realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "80 min",
+      "sesiones": "1 noche",
+      "fechas": "31 de marzo de 2025",
+      "lugar": "Villarcayo",
+      "notas": "Galaxia espiral de tipo Seyfert 2.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 198.36472916666668,
+        "dec": 36.593650000000004,
+        "raTexto": "13h 13m 27.535s",
+        "decTexto": "+36° 35′ 37.14″",
+        "constelacion": "Canes Venatici",
+        "constelacionEs": "Perros de Caza"
+      }
     }
   ]
 }
