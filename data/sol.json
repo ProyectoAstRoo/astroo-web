@@ -45,6 +45,16 @@
       "imagen": "images/sistema-solar/sol/2abril2026ROI.jpg",
       "alt": "Fotografía del Sol en H-alfa, procesada con recorte ROI, realizada con telescopio ACUTER de 40 mm",
       "publicado": true
+    },
+    {
+      "id": "sol-20260402-02042026-web",
+      "titulo": "Sol en H-alfa",
+      "subtitulo": "2 de abril de 2026",
+      "categoria": "H-alfa",
+      "fecha": "2026-04-02",
+      "imagen": "images/sistema-solar/sol/02042026_web.jpg",
+      "alt": "Fotografía del Sol en H-alfa del 2 de abril de 2026",
+      "publicado": true
     }
   ]
 }
