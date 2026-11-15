@@ -229,6 +229,126 @@
         "gaia": "https://www.cosmos.esa.int/web/gaia/dr3",
         "aanda_2024": "https://www.aanda.org/articles/aa/pdf/2024/10/aa49397-24.pdf"
       }
+    },
+    {
+      "id": "NGC 7000",
+      "aliases": [
+        "NGC7000",
+        "Caldwell 20",
+        "C 20",
+        "Sh2-117",
+        "Sharpless 117",
+        "LBN 373",
+        "Nebulosa Norteamérica",
+        "North America Nebula"
+      ],
+      "nombre": "NGC 7000 – Nebulosa Norteamérica",
+      "catalogo": "NGC",
+      "tipo": "Región H II / nebulosa de emisión",
+      "constelacion": "Cygnus (Cisne)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0; centro de referencia catalogado por SIMBAD",
+        "ascension_recta": "20h 58m 47.0s",
+        "declinacion": "+44° 19′ 48″",
+        "ascension_recta_grados": 314.695833,
+        "declinacion_grados": 44.33,
+        "longitud_galactica": "l = 85.5012°",
+        "latitud_galactica": "b = −0.9846°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "809 pc (−18 / +27 pc)",
+          "detalle": "Medición de paralaje recopilada por SIMBAD, con referencia a Zucker et al. (2020). La distancia publicada para el complejo W80/North America–Pelican depende de la selección de miembros y del método; no debe considerarse una cifra universal."
+        },
+        {
+          "nombre": "Distancia en años luz",
+          "valor": "≈ 2 640 años luz",
+          "detalle": "Conversión aproximada de 809 pc; la incertidumbre equivalente es aproximadamente −59 / +88 años luz."
+        },
+        {
+          "nombre": "Tamaño angular aparente",
+          "valor": "≈ 120′ × 100′ (≈ 2.0° × 1.7°)",
+          "detalle": "Dimensión aproximada de la nebulosa visible; el contorno depende de la banda observada y del criterio usado para delimitar la emisión."
+        },
+        {
+          "nombre": "Coordenadas ecuatoriales",
+          "valor": "20h 58m 47.0s ; +44° 19′ 48″",
+          "detalle": "Centro de referencia ICRS/J2000 indicado por SIMBAD. La nebulosa es extensa, por lo que estas coordenadas sirven como posición de referencia y no describen todo su contorno."
+        },
+        {
+          "nombre": "Coordenadas galácticas",
+          "valor": "l = 85.5012° ; b = −0.9846°",
+          "detalle": "Coordenadas galácticas J2000 derivadas de la posición de referencia de SIMBAD."
+        }
+      ],
+      "estructura": "NGC 7000 es la porción oriental, visible en luz óptica, de la extensa región H II W80. El complejo incluye también la nebulosa del Pelícano (IC 5070), situada al oeste. Ambas regiones aparecen separadas en imágenes ópticas por la nube oscura L935/LDN 935, que absorbe la luz del gas ionizado situado detrás y dibuja las formas que dieron nombre a las nebulosas. Por tanto, NGC 7000 no debe interpretarse como una nube aislada de los procesos físicos de W80.",
+      "fisica": "La emisión de la nebulosa procede del gas, principalmente hidrógeno, ionizado por radiación ultravioleta de estrellas masivas. La recombinación del hidrógeno produce, entre otras líneas, la emisión Hα característica. La región contiene gas ionizado, polvo y material molecular; la interacción entre la radiación estelar, el gas y las nubes densas genera frentes de ionización y regiones de fotodisociación. Los estudios infrarrojos y milimétricos han identificado numerosos objetos estelares jóvenes, núcleos densos y flujos moleculares, evidencia de formación estelar activa en el complejo.",
+      "entorno": "W80 se encuentra en la dirección del complejo de formación estelar de Cygnus. NGC 7000 y la nebulosa del Pelícano forman sus componentes ópticamente más conocidos, con la nube molecular oscura L935 proyectada entre ambas. La estrella 2MASS J205551.25+435224.6, clasificada como O5 V por Comerón y Pasquali (2005), es una candidata destacada a fuente ionizante dominante del complejo; trabajos posteriores también consideran otras estrellas masivas como contribuyentes. No debe atribuirse la ionización a Deneb: su papel como fuente principal no está respaldado por esos estudios.",
+      "interes": "El complejo NGC 7000/IC 5070/W80 es un laboratorio cercano para estudiar regiones H II, la interacción entre estrellas masivas y nubes moleculares, y la formación estelar en un entorno de la Vía Láctea. La distribución de objetos estelares jóvenes, los filamentos moleculares y los flujos de gas permiten investigar cómo la expansión de una región ionizada puede comprimir, dispersar o acelerar el material circundante. La distancia del complejo ha sido objeto de debate histórico; las estimaciones modernas basadas en Gaia sitúan una determinación representativa alrededor de 800 pc, aunque las muestras y subestructuras analizadas pueden producir valores distintos.",
+      "observacion": "NGC 7000 tiene una extensión angular muy grande y un brillo superficial bajo en comparación con su magnitud integrada aparente. Se aprecia mejor con cielo oscuro, baja contaminación lumínica, campo amplio y filtros adecuados para nebulosas de emisión. La forma recuerda al continente norteamericano; la zona oscura de L935 define parte de la silueta. Para fotografía conviene un encuadre amplio o un mosaico, ya que el objeto ocupa varios grados y forma parte de un complejo mayor junto a IC 5070.",
+      "captura": {
+        "equipo": "Seestar S50 Pro",
+        "integracion": "175 min",
+        "sesiones": "No especificado",
+        "fechas": "12 de septiembre de 2026",
+        "lugar": "Villarcayo",
+        "nota": "Fotografía de AstRoo realizada mediante mosaico. Datos procedentes de la entrada correspondiente del catálogo fotográfico."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: NGC 7000",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=NGC+7000",
+          "nota": "Identificadores, coordenadas ICRS/J2000, coordenadas galácticas y mediciones de distancia recopiladas para NGC 7000."
+        },
+        {
+          "autores": "Zucker, C. et al. (2020)",
+          "titulo": "A large catalog of accurate distances to molecular clouds from Gaia DR2",
+          "publicacion": "Astronomy & Astrophysics, 633, A51",
+          "doi": "10.1051/0004-6361/201936132",
+          "url": "https://www.aanda.org/articles/aa/full_html/2020/01/aa36132-19/aa36132-19.html",
+          "nota": "Catálogo de distancias a nubes moleculares basado en Gaia DR2; referencia asociada a la distancia de paralaje recopilada por SIMBAD."
+        },
+        {
+          "autores": "Comerón, F. & Pasquali, A. (2005)",
+          "titulo": "The ionizing star of the North America and Pelican nebulae",
+          "publicacion": "Astronomy & Astrophysics, 430, 541–548",
+          "doi": "10.1051/0004-6361:20041788",
+          "url": "https://doi.org/10.1051/0004-6361:20041788",
+          "nota": "Identifica 2MASS J205551.25+435224.6 como estrella O5 V y candidata a fuente ionizante del complejo."
+        },
+        {
+          "autores": "Rebull, L. M. et al. (2009)",
+          "titulo": "The North American and Pelican Nebulae. I. IRAC Observations",
+          "publicacion": "The Astrophysical Journal, 697, 787",
+          "doi": "10.1088/0004-637X/697/1/787",
+          "url": "https://doi.org/10.1088/0004-637X/697/1/787",
+          "nota": "Estudio infrarrojo del complejo NGC 7000/IC 5070, su población estelar joven y la estructura de W80."
+        },
+        {
+          "autores": "Bally, J. et al. (2014)",
+          "titulo": "Outflows, dusty cores, and a burst of star formation in the North America and Pelican Nebulae",
+          "publicacion": "The Astronomical Journal, 148, 120",
+          "doi": "10.1088/0004-6256/148/6/120",
+          "url": "https://doi.org/10.1088/0004-6256/148/6/120",
+          "nota": "Estudia núcleos de polvo, flujos moleculares y actividad de formación estelar en el complejo NAP."
+        },
+        {
+          "autores": "Zhang, C.-P. et al. (2020)",
+          "titulo": "Testing the star formation scaling relations in the clumps of the North American and Pelican nebulae cloud complex",
+          "publicacion": "Monthly Notices of the Royal Astronomical Society, 500, 3123",
+          "url": "https://academic.oup.com/mnras/article/500/3/3123/6015982",
+          "nota": "Contextualiza W80 y el complejo NGC 7000/IC 5070; adopta una distancia de 800 ± 40 pc basada en Gaia DR2."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=NGC+7000",
+        "gaia_distance": "https://www.aanda.org/articles/aa/full_html/2020/01/aa36132-19/aa36132-19.html",
+        "ionizing_star": "https://doi.org/10.1051/0004-6361:20041788",
+        "spitzer": "https://doi.org/10.1088/0004-637X/697/1/787"
+      }
     }
   ]
 }
