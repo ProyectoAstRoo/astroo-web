@@ -229,6 +229,18 @@
         "constelacion": "Canes Venatici",
         "constelacionEs": "Perros de Caza"
       }
+    },
+    {
+      "objeto": "Auroras boreales",
+      "nombre": "Auroras boreales de Tromsø",
+      "titulo": "Auroras boreales — Tromsø, Noruega",
+      "catalogo": "Otros",
+      "imagen": "./assets/fotos/Otras/Roo_aurora_firma_web.jpg",
+      "alt": "Fotografía de auroras boreales en Tromsø, Noruega, del 21 al 26 de enero de 2026",
+      "fechas": "Del 21 al 26 de enero de 2026",
+      "lugar": "Tromsø, Noruega",
+      "notas": "Fotografía de auroras boreales realizada durante una estancia en Tromsø.",
+      "publicada": true
     }
   ]
 }
