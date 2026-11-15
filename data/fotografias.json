@@ -68,6 +68,29 @@
       "lugar": "Villarcayo",
       "notas": "Fotografía realizada mediante mosaico.",
       "publicada": true
+    },
+    {
+      "objeto": "M108",
+      "nombre": "Galaxia de la Tabla de Surf",
+      "titulo": "M108 — Galaxia de la Tabla de Surf",
+      "catalogo": "Messier",
+      "imagen": "./assets/fotos/Messier/M108_S50_2noches_160m_final_web.jpg",
+      "alt": "Fotografía de M108, la Galaxia de la Tabla de Surf, realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "160 min",
+      "sesiones": "2 noches",
+      "fechas": "2 y 19 de febrero de 2025",
+      "lugar": "Villarcayo",
+      "notas": "Fotografía realizada durante dos noches.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 167.8792,
+        "dec": 55.6742,
+        "raTexto": "11h 11m 31s",
+        "decTexto": "+55° 40′ 27″",
+        "constelacion": "Ursa Major",
+        "constelacionEs": "Osa Mayor"
+      }
     }
   ]
 }
