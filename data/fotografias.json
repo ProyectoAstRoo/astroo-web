@@ -137,6 +137,29 @@
         "constelacion": "Cepheus",
         "constelacionEs": "Cefeo"
       }
+    },
+    {
+      "objeto": "NGC 869/884",
+      "nombre": "Cúmulo Doble de Perseo",
+      "titulo": "NGC 869 y NGC 884 — Cúmulo Doble de Perseo",
+      "catalogo": "NGC",
+      "imagen": "./assets/fotos/NGC/NGC0869_S50P_30-10-2026_87m_final_v1_web.jpg",
+      "alt": "Fotografía del Cúmulo Doble de Perseo, NGC 869 y NGC 884, realizada con Seestar S50 Pro",
+      "telescopio": "Seestar S50 Pro",
+      "exposicion": "87 min",
+      "sesiones": "1 noche",
+      "fechas": "30 de octubre de 2026",
+      "lugar": "Villarcayo",
+      "notas": "Imagen conjunta de los cúmulos abiertos NGC 869 (h Persei) y NGC 884 (χ Persei).",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 35.125,
+        "dec": 57.133333,
+        "raTexto": "02h 20m 30s",
+        "decTexto": "+57° 08′ 00″",
+        "constelacion": "Perseus",
+        "constelacionEs": "Perseo"
+      }
     }
   ]
 }
