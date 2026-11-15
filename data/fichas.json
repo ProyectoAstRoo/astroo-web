@@ -785,6 +785,76 @@
         "simbad": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=Sh2-115",
         "sharpless_atlas": "https://www.astromaster.org/oggetti/sharpless_data/Sharpless_r.pdf"
       }
+    },
+    {
+      "id": "IC 342",
+      "aliases": [
+        "IC342",
+        "UGC 2847",
+        "LEDA 13826",
+        "Galaxia Oculta",
+        "Hidden Galaxy"
+      ],
+      "nombre": "Galaxia Oculta",
+      "catalogo": "IC",
+      "tipo": "Galaxia espiral de tipo Sc.",
+      "constelacion": "Camelopardalis (Jirafa)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "03h 46m 48.514s",
+        "declinacion": "+68° 05′ 45.98″",
+        "ascension_recta_grados": 56.7021417,
+        "declinacion_grados": 68.0961056,
+        "longitud_galactica": "l = 138.172582°",
+        "latitud_galactica": "b = +10.579855°"
+      },
+      "parametros": [
+        {
+          "nombre": "Tipo morfológico",
+          "valor": "Sc",
+          "detalle": "Clasificación morfológica recopilada por SIMBAD."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "21.88′ × 20.89′",
+          "detalle": "Dimensiones ópticas recogidas en SIMBAD; el tamaño aparente depende del límite de brillo utilizado."
+        },
+        {
+          "nombre": "Velocidad radial",
+          "valor": "≈ 30 km/s",
+          "detalle": "Valor heliocéntrico aproximado recopilado por SIMBAD."
+        },
+        {
+          "nombre": "Otros identificadores",
+          "valor": "UGC 2847 · LEDA 13826",
+          "detalle": "Designaciones alternativas presentes en los catálogos astronómicos."
+        }
+      ],
+      "estructura": "IC 342 es una galaxia espiral de tipo tardío situada en la constelación de la Jirafa. Presenta un disco con brazos espirales y regiones de formación estelar. Su posición próxima al plano galáctico hace que su luz llegue a nosotros atravesando una cantidad importante de polvo y estrellas de la Vía Láctea.",
+      "fisica": "La absorción y el enrojecimiento producidos por el polvo de nuestra propia galaxia dificultan el estudio de IC 342 en luz visible. A pesar de ese oscurecimiento, la galaxia es un objeto importante para investigar la estructura de las galaxias espirales y los procesos de formación estelar.",
+      "entorno": "IC 342 es la galaxia más brillante del grupo de galaxias que lleva su nombre. Se encuentra en una región del cielo cercana al plano de la Vía Láctea, circunstancia que explica su denominación popular de Galaxia Oculta.",
+      "interes": "IC 342 constituye un ejemplo destacado de galaxia espiral cuyo estudio óptico está condicionado por la extinción interestelar de la Vía Láctea. Las observaciones en infrarrojo y otras longitudes de onda permiten estudiar regiones que quedan parcialmente ocultas en luz visible.",
+      "observacion": "Se localiza en la constelación de la Jirafa, cerca del límite con Casiopea y Perseo. Aunque su tamaño angular es considerable, el oscurecimiento causado por el polvo galáctico reduce su contraste visual y fotográfico.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "100 min",
+        "sesiones": "1 noche",
+        "fechas": "25 de diciembre de 2024",
+        "lugar": "Ribas de la Valduerna",
+        "nota": "Fotografía de AstRoo realizada durante una sesión."
+      },
+      "referencias": [
+        {
+          "autores": "CDS / SIMBAD",
+          "titulo": "SIMBAD Astronomical Database: IC 342",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=IC342",
+          "nota": "Coordenadas ICRS J2000, coordenadas galácticas, clasificación morfológica, tamaño angular e identificadores."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=IC342"
+      }
     }
   ]
 }
