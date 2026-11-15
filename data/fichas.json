@@ -1014,6 +1014,85 @@
         "simbad": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=M+2",
         "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-2/"
       }
+    },
+    {
+      "id": "NGC 6960",
+      "aliases": [
+        "NGC6960",
+        "Nebulosa del Velo",
+        "Veil Nebula",
+        "Escoba de la Bruja",
+        "Western Veil Nebula",
+        "Caldwell 34",
+        "C 34",
+        "Cygnus Loop"
+      ],
+      "nombre": "Nebulosa del Velo (NGC 6960)",
+      "catalogo": "NGC",
+      "tipo": "Remanente de supernova; nebulosa filamentaria de emisión",
+      "constelacion": "Cygnus (Cisne)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "20h 45m 38.0s",
+        "declinacion": "+30° 42′ 30″",
+        "longitud_galactica": "l = 73.2920°",
+        "latitud_galactica": "b = −7.6335°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 2.100 años luz (≈ 640 pc)",
+          "detalle": "Distancia publicada por NASA para el complejo de la Nebulosa del Velo; las estimaciones pueden variar según el método."
+        },
+        {
+          "nombre": "Tamaño del complejo",
+          "valor": "≈ 110 años luz",
+          "detalle": "Extensión aproximada del conjunto del Velo/Cygnus Loop, no solo del filamento NGC 6960."
+        },
+        {
+          "nombre": "Naturaleza",
+          "valor": "Remanente de supernova",
+          "detalle": "Gas interestelar calentado y excitado por las ondas de choque de la explosión estelar."
+        },
+        {
+          "nombre": "Edad aproximada de la explosión",
+          "valor": "≈ 8.000 años",
+          "detalle": "Estimación divulgada por NASA para la supernova que originó el complejo."
+        }
+      ],
+      "estructura": "NGC 6960 es la parte occidental del gran remanente de supernova conocido como Nebulosa del Velo o Cygnus Loop. Su aspecto característico está formado por filamentos finos y curvados de gas, producidos cuando la onda expansiva de la supernova avanza e interactúa con el medio interestelar. El conjunto incluye otras regiones brillantes, como NGC 6992 y NGC 6995.",
+      "fisica": "La emisión procede del gas interestelar que ha sido calentado y excitado por el frente de choque. Diferentes especies químicas y estados de ionización producen líneas de emisión características: hidrógeno en H-alfa, oxígeno doblemente ionizado ([O III]) y azufre ionizado ([S II]). La apariencia filamentaria se debe a la geometría de la onda de choque y a su interacción con zonas de distinta densidad.",
+      "entorno": "El remanente se encuentra en la constelación del Cisne, dentro del plano de la Vía Láctea. NGC 6960 constituye el tramo occidental del Cygnus Loop; la estrella 52 Cygni aparece proyectada sobre esta zona y sirve como referencia visual para localizar la nebulosa, aunque no forma parte física del remanente.",
+      "interes": "La Nebulosa del Velo permite estudiar la evolución de los remanentes de supernova y cómo las explosiones estelares enriquecen y modifican el medio interestelar. Sus filamentos muestran con gran detalle la interacción entre ondas de choque, gas y campos magnéticos. La comparación de imágenes tomadas en distintas épocas también permite investigar la expansión del remanente.",
+      "observacion": "NGC 6960 tiene un brillo superficial bajo y una extensión considerable, por lo que se beneficia de cielos oscuros y de filtros de banda estrecha o de rechazo de contaminación lumínica. Es una nebulosa especialmente adecuada para encuadres amplios y mosaicos. En visual, un filtro O III suele mejorar notablemente el contraste de sus filamentos.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "220 min",
+        "sesiones": "1 sesión",
+        "fechas": "27 de junio de 2025",
+        "lugar": "Villarcayo",
+        "nota": "Fotografía de AstRoo realizada mediante mosaico."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: NGC 6960",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=NGC+6960",
+          "nota": "Tipo de objeto, identificadores y coordenadas ICRS J2000."
+        },
+        {
+          "autores": "NASA / ESA / Hubble Heritage Team",
+          "titulo": "The Veil Nebula, NGC 6960",
+          "publicacion": "NASA Science",
+          "url": "https://science.nasa.gov/asset/hubble/the-veil-nebula-ngc-6960/",
+          "nota": "Distancia aproximada, tamaño del complejo, edad estimada y explicación de los filamentos y emisiones."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=NGC+6960",
+        "nasa": "https://science.nasa.gov/asset/hubble/the-veil-nebula-ngc-6960/"
+      }
     }
   ]
 }
