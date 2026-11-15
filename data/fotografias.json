@@ -91,6 +91,29 @@
         "constelacion": "Ursa Major",
         "constelacionEs": "Osa Mayor"
       }
+    },
+    {
+      "objeto": "M1",
+      "nombre": "Nebulosa del Cangrejo",
+      "titulo": "M1 — Nebulosa del Cangrejo",
+      "catalogo": "Messier",
+      "imagen": "./assets/fotos/Messier/M001_S50_24-12-2025_150m_final_web.jpg",
+      "alt": "Fotografía de M1, la Nebulosa del Cangrejo, realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "150 min",
+      "sesiones": "1 noche",
+      "fechas": "24 de diciembre de 2025",
+      "lugar": "Ribas",
+      "notas": "Fotografía realizada durante una sesión.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 83.6325,
+        "dec": 22.0175,
+        "raTexto": "05h 34m 31.8s",
+        "decTexto": "+22° 01′ 03″",
+        "constelacion": "Taurus",
+        "constelacionEs": "Tauro"
+      }
     }
   ]
 }
