@@ -239,8 +239,24 @@ function updateCatalogSearch(){
 search.addEventListener('input',()=>{
   gallerySearchQuery=search.value.trim();
   selectedCatalog='all';
-  updateCatalogSearch();
+  const isCatalogQuery=updateCatalogSearch();
   renderAstrooGallery();
+
+  // Cuando la consulta corresponde a un objeto (M33, 33, NGC 7331...),
+  // lleva al visitante directamente a los resultados de la galería.
+  if(gallerySearchQuery && !isCatalogQuery){
+    const hasResults=astrooPhotos.some(photo=>
+      photo.publicada!==false && matchesAstrooPhoto(photo,gallerySearchQuery)
+    );
+    if(hasResults){
+      requestAnimationFrame(()=>{
+        document.getElementById('galeria')?.scrollIntoView({
+          behavior:'smooth',
+          block:'start'
+        });
+      });
+    }
+  }
 });
 
 let astrooPhotos = [];
