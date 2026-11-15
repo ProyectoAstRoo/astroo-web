@@ -68,7 +68,7 @@ body.lightbox-open{overflow:hidden}
 <section class="section" id="astrofotografia"><div class="wrap"><div class="section-head"><div><div class="eyebrow" data-i18n="photo_eyebrow">Explora por disciplinas</div><h2 data-i18n="photo_title">El cielo en imágenes</h2></div><p data-i18n="photo_intro">Una mirada a distintas regiones y objetos del universo, desde nuestro Sol hasta las galaxias más lejanas.</p></div>
 <div class="featuregrid"><a class="feature large" id="deep" href="#catalogos"><div class="abstract galaxy"></div><div class="copy"><span class="tag">AstRoo Imaging · 01</span><h3 data-i18n="deep_title">Cielo profundo</h3><p data-i18n="deep_text">Galaxias, nebulosas, cúmulos y regiones de polvo interestelar.</p><span class="eyebrow" data-i18n="explore_deep">Explorar cielo profundo ↗</span></div></a><div class="mini-features"><a class="feature" id="solar" href="#solar-gallery"><div class="abstract sun"></div><div class="copy"><span class="tag">AstRoo Imaging · 02</span><h3 data-i18n="sun_title">El Sol en H-alfa</h3><p data-i18n="sun_text">La actividad de nuestra estrella.</p></div></a><a class="feature" id="luna" href="#moon-planets-gallery"><div class="abstract moon"></div><div class="copy"><span class="tag">AstRoo Imaging · 03</span><h3 data-i18n="moon_title">Luna y planetas</h3><p data-i18n="moon_text">Detalles del sistema solar.</p></div></a></div></div></div></section>
 <section class="section" id="catalogos" style="padding-top:10px"><div class="wrap"><div class="section-head"><div><div class="eyebrow" data-i18n="catalog_eyebrow">Objetos fotografiados</div><h2 data-i18n="catalog_title">Explora los catálogos</h2></div><p data-i18n="catalog_intro">Busca por nombre o catálogo. La versión pública mostrará únicamente objetos con fotografía final publicada.</p></div>
-<div class="catalog-tools"><label class="search"><input id="catalog-search" type="search" placeholder="Buscar catálogo… / Search catalog…" aria-label="Search catalog"></label><span class="filter-count" id="filter-count">8 catálogos</span></div>
+<div class="catalog-tools"><label class="search"><input id="catalog-search" type="search" placeholder="Buscar objeto o catálogo… / Search object or catalogue…" aria-label="Buscar objeto o catálogo"></label><span class="filter-count" id="filter-count">8 catálogos</span></div>
 <div class="cataloggrid" id="catalog-grid">
 <a class="catalog" href="#galeria" data-catalog="Messier" data-search="messier m"><div class="letter">M</div><strong>Messier</strong><p data-i18n="cat_m">Galaxias, nebulosas y cúmulos</p></a>
 <a class="catalog" href="#galeria" data-catalog="NGC" data-search="ngc new general catalogue"><div class="letter">NGC</div><strong>New General Catalogue</strong><p data-i18n="cat_ngc">Objetos de cielo profundo</p></a>
@@ -212,10 +212,60 @@ function selectEquipmentTab(key){
 }
 document.querySelectorAll('[data-equipment-tab]').forEach(tab=>tab.addEventListener('click',()=>selectEquipmentTab(tab.dataset.equipmentTab)));
 selectEquipmentTab(selectedEquipmentTab);
-const search=document.getElementById('catalog-search');search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let n=0;document.querySelectorAll('.catalog').forEach(card=>{const ok=(card.dataset.search+' '+card.innerText).toLowerCase().includes(q);card.hidden=!ok;if(ok)n++});document.getElementById('filter-count').textContent=n+(document.documentElement.lang==='es'?' catálogos':' catalogues')});
+const search=document.getElementById('catalog-search');
+let gallerySearchQuery='';
+function updateCatalogSearch(){
+  const q=search.value.trim().toLowerCase();
+  let count=0;
+  document.querySelectorAll('.catalog').forEach(card=>{
+    const matches=!q||(card.dataset.search+' '+card.innerText).toLowerCase().includes(q);
+    card.hidden=!matches;
+    if(matches)count++;
+  });
+  const counter=document.getElementById('filter-count');
+  if(counter)counter.textContent=count+(document.documentElement.lang==='es'?' catálogos':' catalogues');
+}
+search.addEventListener('input',()=>{
+  gallerySearchQuery=search.value.trim();
+  selectedCatalog='all';
+  updateCatalogSearch();
+  renderAstrooGallery();
+});
 
 let astrooPhotos = [];
 let selectedCatalog = 'all';
+
+function normalizeSearch(value){
+  return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[–—]/g,'-').replace(/\s+/g,' ').trim();
+}
+function matchesAstrooPhoto(photo, query){
+  const q=normalizeSearch(query);
+  if(!q)return true;
+  const object=normalizeSearch(photo.objeto);
+  const title=normalizeSearch(photo.titulo);
+  const name=normalizeSearch(photo.nombre);
+  const catalog=normalizeSearch(photo.catalogo);
+  const combined=[object,title,name,catalog].filter(Boolean).join(' ');
+  // Una búsqueda solo numérica compara el número del identificador (M33 -> 33),
+  // no fechas, tiempos de exposición ni otros números de la ficha.
+  if(/^\d+$/.test(q)){
+    const objectMatch=object.match(/(?:^|\s)(?:m|ngc|ic|c|caldwell|sh|ldn|lbn|b)?\s*0*(\d+)$/i);
+    return !!objectMatch && String(Number(objectMatch[1]))===String(Number(q));
+  }
+  // Admite identificadores escritos juntos o separados: M33, M 33, NGC7331, IC 1396.
+  const idMatch=q.match(/^(m|ngc|ic|c|caldwell|sh|ldn|lbn|b)\s*0*(\d+)$/i);
+  if(idMatch){
+    const prefix=idMatch[1].toLowerCase();
+    const number=String(Number(idMatch[2]));
+    const objectMatch=object.match(/^(m|ngc|ic|c|caldwell|sh|ldn|lbn|b)\s*0*(\d+)$/i);
+    if(objectMatch && objectMatch[1].toLowerCase()===prefix && String(Number(objectMatch[2]))===number)return true;
+    if((prefix==='m'&&catalog==='messier')||(prefix==='ngc'&&catalog==='ngc')||(prefix==='ic'&&catalog==='ic')||(prefix==='c'&&catalog==='caldwell')){
+      return object.endsWith(number) && new RegExp('^'+prefix+'\\s*0*'+number+'$','i').test(object);
+    }
+    return false;
+  }
+  return combined.includes(q);
+}
 
 function belongsToCatalog(photo, catalog){
   const value = String(photo.catalogo || '').trim().toLowerCase();
@@ -235,7 +285,7 @@ function renderAstrooGallery(){
   if(!grid)return;
 
   const photos=astrooPhotos.filter(photo=>
-    photo.publicada!==false && belongsToCatalog(photo, selectedCatalog)
+    photo.publicada!==false && belongsToCatalog(photo, selectedCatalog) && matchesAstrooPhoto(photo, gallerySearchQuery)
   );
   grid.innerHTML='';
   photos.forEach(photo=>{
@@ -282,12 +332,17 @@ function renderAstrooGallery(){
 
   status.textContent=photos.length
     ? `${photos.length} fotografía${photos.length===1?'':'s'} publicada${photos.length===1?'':'s'}.`
-    : 'Todavía no hay fotografías publicadas en este catálogo.';
+    : (gallerySearchQuery
+        ? 'No hay fotografías publicadas que coincidan con esa búsqueda.'
+        : 'Todavía no hay fotografías publicadas en este catálogo.');
 }
 
 document.querySelectorAll('.catalog[data-catalog]').forEach(card=>{
   card.addEventListener('click',()=>{
     selectedCatalog=card.dataset.catalog;
+    gallerySearchQuery='';
+    if(search)search.value='';
+    updateCatalogSearch();
     renderAstrooGallery();
   });
 });
