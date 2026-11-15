@@ -21,8 +21,14 @@ dl.params{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;ma
 p{color:#d5deea;margin:0 0 12px}.small{font-size:12px;color:var(--muted)}
 ul{padding-left:20px;color:#d5deea}li{margin:8px 0}.ref{padding:13px 0;border-top:1px solid var(--line)}.ref:first-child{border-top:0}.ref strong{display:block;color:#fff}.tag{display:inline-block;border:1px solid var(--line);padding:4px 9px;border-radius:20px;color:var(--muted);font-size:11px;margin:4px 5px 0 0}
 footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:11px}
-@media(max-width:700px){.grid{grid-template-columns:1fr}.panel{padding:17px}dl.params{grid-template-columns:1fr}main{padding-top:25px}}
+
+.sky-map-panel .sky-map{width:100%;height:420px;min-height:320px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#050912}
+.sky-map-panel .sky-map-note{font-size:11px;color:var(--muted);margin:10px 0 0}
+@media(max-width:700px){.sky-map-panel .sky-map{height:340px;min-height:300px}}
+\n@media(max-width:700px){.grid{grid-template-columns:1fr}.panel{padding:17px}dl.params{grid-template-columns:1fr}main{padding-top:25px}}
 </style>
+<link rel="stylesheet" href="https://aladin.cds.unistra.fr/AladinLite/api/v3/latest/aladin.css">
+<script src="https://aladin.cds.unistra.fr/AladinLite/api/v3/latest/aladin.js" charset="utf-8"></script>
 </head>
 <body>
 <header><div class="wrap"><div class="brand">AstRoo</div><a class="back" href="./index.html#galeria">← Volver a la galería</a></div></header>
@@ -57,6 +63,12 @@ async function init(){
      <div><p><b>Longitud galáctica:</b> ${esc(ficha.coordenadas?.longitud_galactica)}</p><p><b>Latitud galáctica:</b> ${esc(ficha.coordenadas?.latitud_galactica)}</p></div>
     </div><p class="small">Sistema de coordenadas: ${esc(ficha.coordenadas?.sistema)}</p>
    </section>
+   ${norm(ficha.id)==='m33'?`<section class="panel sky-map-panel" id="localizacion-cielo">
+    <h2>Localización en el cielo</h2>
+    <p class="small">Carta celeste interactiva centrada en la posición del objeto. Puedes ampliar, reducir y desplazarte por el campo.</p>
+    <div id="astroo-aladin-map" class="sky-map" role="img" aria-label="Carta celeste interactiva"></div>
+    <p class="sky-map-note">Carta generada con Aladin Lite · CDS, Strasbourg. La retícula central indica la posición del objeto.</p>
+   </section>`:''}
    <section class="panel"><h2>Parámetros físicos y observacionales</h2><dl class="params">${phtml}</dl></section>
    <section class="panel"><h2>Morfología y estructura</h2><p>${esc(ficha.estructura)}</p></section>
    <section class="panel"><h2>Procesos astrofísicos</h2><p>${esc(ficha.fisica)}</p></section>
@@ -71,6 +83,37 @@ async function init(){
    <p class="small">Los valores derivados se identifican como estimaciones. Las cifras dependen de la definición observacional, la banda fotométrica y el método de medida; consulta las referencias para su contexto.</p>
    <a class="back" href="./index.html#galeria">← Volver a la galería</a>`;
   document.title=`${ficha.id} — ${ficha.nombre} | AstRoo`;
+  // Aladin Lite: usa las coordenadas de localizacionCielo del catálogo fotográfico.
+  const sky = photo?.localizacionCielo;
+  const mapHost = document.getElementById('astroo-aladin-map');
+  if (sky && Number.isFinite(Number(sky.ra)) && Number.isFinite(Number(sky.dec)) && mapHost) {
+    if (window.A && window.A.init) {
+      window.A.init.then(() => {
+        if (!document.getElementById('astroo-aladin-map')) return;
+        const fov = norm(ficha.id) === 'm33' ? 8 : 5;
+        window.A.aladin('#astroo-aladin-map', {
+          target: `${Number(sky.ra)} ${Number(sky.dec)}`,
+          cooFrame: 'ICRSd',
+          survey: 'P/DSS2/color',
+          fov,
+          showReticle: true,
+          reticleColor: '#ffcc66',
+          reticleSize: 24,
+          showCooGridControl: true,
+          showZoomControl: true,
+          showFullscreenControl: true,
+          showSimbadPointerControl: true
+        });
+      }).catch(err => {
+        console.error('No se pudo iniciar Aladin Lite:', err);
+        mapHost.innerHTML = '<p style="padding:18px;color:#aab8c9">No se pudo cargar la carta celeste. Comprueba la conexión a Internet.</p>';
+      });
+    } else {
+      mapHost.innerHTML = '<p style="padding:18px;color:#aab8c9">Aladin Lite no está disponible. Comprueba la conexión a Internet.</p>';
+    }
+  } else if (mapHost) {
+    mapHost.innerHTML = '<p style="padding:18px;color:#aab8c9">No hay coordenadas de localización disponibles para este objeto.</p>';
+  }
  }catch(e){console.error(e);host.innerHTML='<section class="panel"><h1>No se pudo cargar la ficha</h1><p>Comprueba que los archivos de datos están publicados en la carpeta data.</p><a href="./index.html#galeria">Volver a la galería</a></section>';}
 }
 init();
