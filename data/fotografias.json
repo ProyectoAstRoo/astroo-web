@@ -160,6 +160,29 @@
         "constelacion": "Perseus",
         "constelacionEs": "Perseo"
       }
+    },
+    {
+      "objeto": "SH2-115",
+      "nombre": "Nebulosa de emisión SH2-115",
+      "titulo": "SH2-115 — Nebulosa de emisión",
+      "catalogo": "Sharpless",
+      "imagen": "./assets/fotos/SH/SH2-115_S50_09-07-2026_04h20m_final_web.jpg",
+      "alt": "Fotografía de la nebulosa de emisión SH2-115 realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "260 min",
+      "sesiones": "1 noche",
+      "fechas": "9 de julio de 2026",
+      "lugar": "Ribas de la Valduerna",
+      "notas": "Región H II fotografiada desde Ribas de la Valduerna.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 308.758333,
+        "dec": 47.04,
+        "raTexto": "20h 35m 02s",
+        "decTexto": "+47° 02′ 24″",
+        "constelacion": "Cygnus",
+        "constelacionEs": "Cisne"
+      }
     }
   ]
 }
