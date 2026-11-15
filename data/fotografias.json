@@ -54,6 +54,20 @@
       "sesiones": "1 sesión",
       "fechas": "14 de septiembre de 2026",
       "publicada": true
+    },
+    {
+      "objeto": "NGC 7000",
+      "nombre": "Nebulosa Norteamérica",
+      "titulo": "NGC 7000 — Nebulosa Norteamérica",
+      "catalogo": "NGC",
+      "imagen": "./assets/fotos/NGC/NGC7000_S50P_12-09-2026_Mos_v2_web_final.jpg",
+      "alt": "Fotografía de NGC 7000, la Nebulosa Norteamérica, realizada con Seestar S50 Pro mediante mosaico",
+      "telescopio": "Seestar S50 Pro",
+      "exposicion": "175 min",
+      "fechas": "12 de septiembre de 2026",
+      "lugar": "Villarcayo",
+      "notas": "Fotografía realizada mediante mosaico.",
+      "publicada": true
     }
   ]
 }
