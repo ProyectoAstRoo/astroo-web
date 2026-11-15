@@ -438,6 +438,94 @@
         "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-108/",
         "simbad": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=M108"
       }
+    },
+    {
+      "id": "M1",
+      "aliases": [
+        "M 1",
+        "Messier 1",
+        "NGC 1952",
+        "Nebulosa del Cangrejo",
+        "Crab Nebula"
+      ],
+      "nombre": "Nebulosa del Cangrejo",
+      "catalogo": "Messier",
+      "tipo": "Remanente de supernova",
+      "constelacion": "Taurus (Tauro)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "05h 34m 31.8s",
+        "declinacion": "+22° 01′ 03″",
+        "ascension_recta_grados": 83.6325,
+        "declinacion_grados": 22.0175,
+        "longitud_galactica": "l = 184.5547°",
+        "latitud_galactica": "b = −5.7833°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 6.500 años luz",
+          "detalle": "Valor de referencia divulgado por NASA; las estimaciones pueden variar según el método."
+        },
+        {
+          "nombre": "Magnitud aparente",
+          "valor": "≈ 8,4 mag",
+          "detalle": "Magnitud integrada aproximada en banda visual."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "≈ 7′ × 5′",
+          "detalle": "Tamaño angular recopilado por SIMBAD para el remanente; depende de la banda y del límite de emisión."
+        },
+        {
+          "nombre": "Naturaleza",
+          "valor": "Remanente de supernova",
+          "detalle": "Material expulsado durante la explosión de una estrella masiva, interactuando con el medio circundante."
+        },
+        {
+          "nombre": "Año de la supernova",
+          "valor": "1054",
+          "detalle": "La explosión fue registrada por observadores históricos, entre ellos astrónomos chinos."
+        },
+        {
+          "nombre": "Objeto compacto central",
+          "valor": "Púlsar del Cangrejo",
+          "detalle": "Estrella de neutrones en rápida rotación que alimenta la nebulosa con partículas relativistas y radiación."
+        }
+      ],
+      "estructura": "La Nebulosa del Cangrejo es el remanente de una supernova: una estructura en expansión formada por material estelar expulsado y por partículas energéticas. Su morfología filamentosa se observa en distintas longitudes de onda. En el centro se encuentra el púlsar del Cangrejo, una estrella de neutrones cuyo viento relativista alimenta una nebulosa de partículas.",
+      "fisica": "La emisión de M1 procede de varios procesos físicos. Los filamentos contienen gas expulsado por la estrella progenitora y calentado por choques, mientras que la región central está dominada por la emisión sincrotrón de electrones relativistas que se mueven en el campo magnético. El púlsar central, con una rotación de unas 30 veces por segundo, suministra energía al sistema mediante su viento de partículas.",
+      "entorno": "La supernova que originó M1 fue observada en el año 1054 y descrita en registros históricos de Asia. El remanente se encuentra en la constelación de Tauro, cerca de la estrella ζ Tauri en el cielo. Su expansión y evolución continúan siendo observables, por lo que constituye un laboratorio natural para estudiar la dinámica de los remanentes de supernova.",
+      "interes": "M1 es uno de los remanentes de supernova más estudiados. Permite investigar la evolución de una explosión estelar, la aceleración de partículas hasta energías relativistas, los campos magnéticos y la interacción entre el púlsar y el material expulsado. Su emisión abarca desde ondas de radio hasta rayos gamma.",
+      "observacion": "La Nebulosa del Cangrejo se localiza en Tauro, al noroeste de ζ Tauri. Tiene un tamaño aparente de unos pocos minutos de arco y una magnitud integrada cercana a 8,4, aunque su brillo superficial es moderado. En fotografía de cielo profundo conviene utilizar una focal suficiente para resolver su estructura interna y acumular integración para mejorar la señal de los filamentos.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "150 min",
+        "sesiones": "1 noche",
+        "fechas": "24 de diciembre de 2025",
+        "lugar": "Ribas",
+        "nota": "Fotografía de AstRoo realizada durante una sesión."
+      },
+      "referencias": [
+        {
+          "autores": "NASA Science",
+          "titulo": "Messier 1 (The Crab Nebula)",
+          "publicacion": "Hubble Messier Catalog",
+          "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-1/",
+          "nota": "Distancia, magnitud aparente, constelación, tipo de objeto y contexto físico del remanente y su púlsar."
+        },
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: Messier 1",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=Messier+1",
+          "nota": "Identificación, coordenadas ICRS, coordenadas galácticas y tamaño angular."
+        }
+      ],
+      "fuentes_urls": {
+        "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-1/",
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=Messier+1"
+      }
     }
   ]
 }
