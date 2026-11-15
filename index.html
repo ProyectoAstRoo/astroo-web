@@ -50,8 +50,26 @@ body.lightbox-open{overflow:hidden}
 .about-copy p{margin:0 0 15px}.about-copy p{text-align:justify;text-justify:inter-word}
 
 
-.ficha-link{display:inline-flex;align-items:center;gap:7px;margin-top:12px;padding:8px 12px;border:1px solid rgba(105,184,242,.38);border-radius:8px;color:#9bd0fa;font-size:11px;letter-spacing:.02em;transition:.2s}
-.ficha-link:hover{background:rgba(50,135,199,.14);border-color:#69b8f2;color:#fff}
+/* Carta de localización astronómica AstRoo */
+.skychart-action{display:inline-flex;align-items:center;gap:8px;margin-top:13px;padding:9px 13px;border:1px solid rgba(105,184,242,.42);border-radius:8px;background:rgba(54,124,181,.12);color:#a9d9ff;font-size:10px;letter-spacing:.7px;text-transform:uppercase;cursor:pointer;transition:.2s}
+.skychart-action:hover{background:rgba(54,124,181,.24);border-color:#69b8f2;transform:translateY(-1px)}
+.skychart-overlay{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(2,7,15,.88);backdrop-filter:blur(10px)}
+.skychart-overlay.open{display:flex}
+.skychart-dialog{position:relative;width:min(720px,100%);max-height:92vh;overflow:auto;padding:26px;background:linear-gradient(145deg,#101b2c,#091321);border:1px solid rgba(105,184,242,.3);border-radius:16px;box-shadow:0 25px 90px rgba(0,0,0,.55)}
+.skychart-close{position:absolute;top:12px;right:14px;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:#142943;color:#fff;font-size:23px;cursor:pointer}
+.skychart-eyebrow{color:#82c5f5;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin:0 45px 8px 0}
+.skychart-title{font-size:clamp(18px,3vw,25px);margin:0 45px 17px 0;color:#f1f5fa}
+.skychart-image-wrap{position:relative;overflow:hidden;border:1px solid rgba(190,215,240,.18);border-radius:10px;background:#050a12}
+.skychart-image{display:block;width:100%;min-height:220px;max-height:440px;object-fit:contain}
+.skychart-marker{position:absolute;left:50%;top:50%;width:23px;height:23px;transform:translate(-50%,-50%);border:2px solid #ffcf70;border-radius:50%;box-shadow:0 0 0 5px rgba(255,207,112,.18),0 0 18px #ffcf70;pointer-events:none}
+.skychart-marker:after{content:"";position:absolute;left:50%;top:50%;width:39px;height:1px;background:#ffcf70;transform:translate(-50%,-50%)}
+.skychart-marker:before{content:"";position:absolute;left:50%;top:50%;height:39px;width:1px;background:#ffcf70;transform:translate(-50%,-50%)}
+.skychart-caption{margin:10px 0 0;color:#91a9c0;font:11px/1.6 Arial,sans-serif}
+.skychart-data{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+.skychart-data div{padding:12px;background:rgba(255,255,255,.035);border:1px solid rgba(190,215,240,.1);border-radius:9px;min-width:0}
+.skychart-data small{display:block;color:#91a9c0;font:9px/1.5 Arial,sans-serif;letter-spacing:1px;text-transform:uppercase}
+.skychart-data strong{display:block;margin-top:5px;color:#f1f5fa;font-size:12px;overflow-wrap:anywhere}
+@media(max-width:560px){.skychart-dialog{padding:20px 15px}.skychart-data{grid-template-columns:1fr 1fr}.skychart-image{min-height:180px}}
 
 </style>
 </head>
@@ -136,6 +154,25 @@ body.lightbox-open{overflow:hidden}
 <p class="contact-email" style="margin-top:22px"><strong>Contacto:</strong> <a href="mailto:astroo.roberto@gmail.com" style="color:var(--accent,#82c5f5);text-decoration:none">astroo.roberto@gmail.com</a></p></div>
 </div></div></section>
 </main>
+
+
+<div class="skychart-overlay" id="astroo-skychart" role="dialog" aria-modal="true" aria-labelledby="skychart-title" aria-hidden="true">
+  <div class="skychart-dialog">
+    <button class="skychart-close" id="skychart-close" type="button" aria-label="Cerrar carta">×</button>
+    <p class="skychart-eyebrow">Localización en el cielo</p>
+    <h2 class="skychart-title" id="skychart-title">Objeto</h2>
+    <div class="skychart-image-wrap">
+      <img class="skychart-image" id="skychart-image" alt="Carta del campo estelar">
+      <span class="skychart-marker" aria-hidden="true"></span>
+    </div>
+    <p class="skychart-caption" id="skychart-caption">Campo estelar real. El círculo señala la posición del objeto.</p>
+    <div class="skychart-data">
+      <div><small>Constelación</small><strong id="skychart-constellation"></strong></div>
+      <div><small>Ascensión recta</small><strong id="skychart-ra"></strong></div>
+      <div><small>Declinación</small><strong id="skychart-dec"></strong></div>
+    </div>
+  </div>
+</div>
 
 <div class="lightbox" id="astroo-lightbox" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" aria-hidden="true">
   <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar fotografía">×</button>
@@ -264,7 +301,6 @@ search.addEventListener('input',()=>{
 });
 
 let astrooPhotos = [];
-let astrooFichaIds = new Set();
 let selectedCatalog = 'all';
 
 function normalizeSearch(value){
@@ -310,6 +346,51 @@ function belongsToCatalog(photo, catalog){
   }
   return value === catalog.toLowerCase();
 }
+
+
+// Carta estática de localización: imagen real del cielo obtenida de HiPS/DSS.
+function openAstrooSkyChart(photo){
+  const data=photo&&photo.localizacionCielo;
+  if(!data)return;
+  const overlay=document.getElementById('astroo-skychart');
+  const title=document.getElementById('skychart-title');
+  const image=document.getElementById('skychart-image');
+  const close=document.getElementById('skychart-close');
+  if(!overlay||!title||!image||!close)return;
+  const lang=document.documentElement.lang||'es';
+  title.textContent=photo.titulo||photo.objeto||'';
+  const params=new URLSearchParams({
+    hips:'CDS/P/DSS2/color',
+    width:'900',height:'600',fov:'8',
+    projection:'TAN',coordsys:'icrs',
+    ra:String(data.ra),dec:String(data.dec),format:'jpg'
+  });
+  image.src='https://alasky.cds.unistra.fr/hips-image-services/hips2fits?'+params.toString();
+  image.alt=(lang==='en'?'Real sky field centered on ':'Campo estelar real centrado en ')+(photo.objeto||photo.titulo||'');
+  document.getElementById('skychart-constellation').textContent=lang==='en'?(data.constelacion||''):(data.constelacionEs||data.constelacion||'');
+  document.getElementById('skychart-ra').textContent=data.raTexto||'';
+  document.getElementById('skychart-dec').textContent=data.decTexto||'';
+  document.getElementById('skychart-caption').textContent=lang==='en'
+    ?'Real DSS2 sky survey image. The marker indicates the object coordinates.'
+    :'Imagen real del sondeo DSS2. La marca señala las coordenadas del objeto.';
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden','false');
+  document.body.classList.add('lightbox-open');
+  close.focus();
+}
+(function(){
+  const overlay=document.getElementById('astroo-skychart');
+  const close=document.getElementById('skychart-close');
+  if(!overlay||!close)return;
+  function closeChart(){
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    document.body.classList.remove('lightbox-open');
+  }
+  close.addEventListener('click',closeChart);
+  overlay.addEventListener('click',event=>{if(event.target===overlay)closeChart();});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&overlay.classList.contains('open'))closeChart();});
+})();
 
 function renderAstrooGallery(){
   const grid=document.getElementById('gallery-grid');
@@ -359,15 +440,16 @@ function renderAstrooGallery(){
       info.appendChild(notes);
     }
 
-    article.append(picture,info);
-    if(astrooFichaIds.has(String(photo.objeto||'').trim().toLowerCase())){
-      const fichaLink=document.createElement('a');
-      fichaLink.className='ficha-link';
-      fichaLink.href='./ficha.html?objeto='+encodeURIComponent(photo.objeto||'');
-      fichaLink.textContent=(document.documentElement.lang==='en'?'Scientific profile →':'Consultar ficha astronómica →');
-      article.appendChild(fichaLink);
+    if(photo.localizacionCielo && Number.isFinite(Number(photo.localizacionCielo.ra)) && Number.isFinite(Number(photo.localizacionCielo.dec))){
+      const skyButton=document.createElement('button');
+      skyButton.type='button';
+      skyButton.className='skychart-action';
+      skyButton.textContent=document.documentElement.lang==='en'?'View sky location':'Ver localización en el cielo';
+      skyButton.setAttribute('aria-label',(document.documentElement.lang==='en'?'View sky location of ':'Ver localización en el cielo de ')+(photo.titulo||photo.objeto||''));
+      skyButton.addEventListener('click',()=>openAstrooSkyChart(photo));
+      info.appendChild(skyButton);
     }
-    grid.appendChild(article);
+    article.append(picture,info);grid.appendChild(article);
   });
 
   status.textContent=photos.length
@@ -390,17 +472,10 @@ document.querySelectorAll('.catalog[data-catalog]').forEach(card=>{
 async function loadAstrooGallery(){
   const status=document.getElementById('gallery-status');
   try{
-    const [response,fichaResponse]=await Promise.all([
-      fetch('./data/fotografias.json',{cache:'no-store'}),
-      fetch('./data/fichas.json',{cache:'no-store'})
-    ]);
+    const response=await fetch('./data/fotografias.json',{cache:'no-store'});
     if(!response.ok)throw new Error('No se pudo cargar el catálogo');
     const data=await response.json();
     astrooPhotos=data.fotografias||[];
-    if(fichaResponse.ok){
-      const fichaData=await fichaResponse.json();
-      astrooFichaIds=new Set((fichaData.fichas||[]).map(f=>String(f.id||'').trim().toLowerCase()));
-    }
     updateCatalogSearch();
     renderAstrooGallery();
   }catch(error){
