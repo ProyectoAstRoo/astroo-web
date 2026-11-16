@@ -77,7 +77,6 @@ body.lightbox-open{overflow:hidden}
 <a class="catalog" href="#galeria" data-catalog="Messier" data-search="messier m"><div class="letter">M</div><strong>Messier</strong><p data-i18n="cat_m">Galaxias, nebulosas y cúmulos</p></a>
 <a class="catalog" href="#galeria" data-catalog="NGC" data-search="ngc new general catalogue"><div class="letter">NGC</div><strong>New General Catalogue</strong><p data-i18n="cat_ngc">Objetos de cielo profundo</p></a>
 <a class="catalog" href="#galeria" data-catalog="IC" data-search="ic index catalogue"><div class="letter">IC</div><strong>Index Catalogue</strong><p data-i18n="cat_ic">Catálogo complementario</p></a>
-<a class="catalog" href="#galeria" data-catalog="Caldwell" data-search="caldwell c"><div class="letter">C</div><strong>Caldwell</strong><p data-i18n="cat_c">Selección de objetos destacados</p></a>
 <a class="catalog" href="#galeria" data-catalog="SH" data-search="sh sharpless"><div class="letter">SH</div><strong>Sharpless</strong><p data-i18n="cat_sh">Regiones H II</p></a>
 <a class="catalog" href="#galeria" data-catalog="LDN-LBN" data-search="ldn lynds dark nebulae lbn"><div class="letter">LDN / LBN</div><strong>Lynds</strong><p data-i18n="cat_ldn">Nebulosas oscuras y brillantes</p></a>
 <a class="catalog" href="#galeria" data-catalog="Barnard" data-search="barnard b"><div class="letter">B</div><strong>Barnard</strong><p data-i18n="cat_b">Nebulosas oscuras</p></a>
@@ -281,17 +280,17 @@ function matchesAstrooPhoto(photo, query){
   // Una búsqueda solo numérica compara el número del identificador (M33 -> 33),
   // no fechas, tiempos de exposición ni otros números de la ficha.
   if(/^\d+$/.test(q)){
-    const objectMatch=object.match(/(?:^|\s)(?:m|ngc|ic|c|caldwell|sh|ldn|lbn|b)?\s*0*(\d+)$/i);
+    const objectMatch=object.match(/(?:^|\s)(?:m|ngc|ic|sh|ldn|lbn|b)?\s*0*(\d+)$/i);
     return !!objectMatch && String(Number(objectMatch[1]))===String(Number(q));
   }
   // Admite identificadores escritos juntos o separados: M33, M 33, NGC7331, IC 1396.
-  const idMatch=q.match(/^(m|ngc|ic|c|caldwell|sh|ldn|lbn|b)\s*0*(\d+)$/i);
+  const idMatch=q.match(/^(m|ngc|ic|sh|ldn|lbn|b)\s*0*(\d+)$/i);
   if(idMatch){
     const prefix=idMatch[1].toLowerCase();
     const number=String(Number(idMatch[2]));
-    const objectMatch=object.match(/^(m|ngc|ic|c|caldwell|sh|ldn|lbn|b)\s*0*(\d+)$/i);
+    const objectMatch=object.match(/^(m|ngc|ic|sh|ldn|lbn|b)\s*0*(\d+)$/i);
     if(objectMatch && objectMatch[1].toLowerCase()===prefix && String(Number(objectMatch[2]))===number)return true;
-    if((prefix==='m'&&catalog==='messier')||(prefix==='ngc'&&catalog==='ngc')||(prefix==='ic'&&catalog==='ic')||(prefix==='c'&&catalog==='caldwell')){
+    if((prefix==='m'&&catalog==='messier')||(prefix==='ngc'&&catalog==='ngc')||(prefix==='ic'&&catalog==='ic')){
       return object.endsWith(number) && new RegExp('^'+prefix+'\\s*0*'+number+'$','i').test(object);
     }
     return false;
@@ -316,9 +315,22 @@ function renderAstrooGallery(){
   const status=document.getElementById('gallery-status');
   if(!grid)return;
 
+  const catalogOrder=['Messier','NGC','IC','SH','LDN-LBN','Barnard','Otros'];
+  const objectNumber=photo=>{
+    const match=String(photo.objeto||'').match(/(?:^|\s)(?:M|NGC|IC|SH|LDN|LBN|B)?\s*0*(\d+)/i);
+    return match ? Number(match[1]) : Number.POSITIVE_INFINITY;
+  };
   const photos=astrooPhotos.filter(photo=>
     photo.publicada!==false && belongsToCatalog(photo, selectedCatalog) && matchesAstrooPhoto(photo, gallerySearchQuery)
-  );
+  ).sort((a,b)=>{
+    const aCatalog=catalogOrder.indexOf(a.catalogo);
+    const bCatalog=catalogOrder.indexOf(b.catalogo);
+    const catalogDifference=(aCatalog<0?catalogOrder.length:aCatalog)-(bCatalog<0?catalogOrder.length:bCatalog);
+    if(catalogDifference!==0)return catalogDifference;
+    const numberDifference=objectNumber(a)-objectNumber(b);
+    if(numberDifference!==0)return numberDifference;
+    return String(a.objeto||'').localeCompare(String(b.objeto||''),'es',{numeric:true,sensitivity:'base'});
+  });
   grid.innerHTML='';
   photos.forEach(photo=>{
     const article=document.createElement('article');article.className='shot';
