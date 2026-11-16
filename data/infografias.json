@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "categorias": [
+    {
+      "id": "astrofisica",
+      "nombre": "Astrofísica",
+      "carpeta": "assets/infografias/astrofisica/",
+      "infografias": []
+    },
+    {
+      "id": "instrumentacion",
+      "nombre": "Instrumentación",
+      "carpeta": "assets/infografias/instrumentacion/",
+      "infografias": []
+    },
+    {
+      "id": "astrofotografia",
+      "nombre": "Astrofotografía",
+      "carpeta": "assets/infografias/astrofotografia/",
+      "infografias": []
+    },
+    {
+      "id": "observacion-astronomica",
+      "nombre": "Observación astronómica",
+      "carpeta": "assets/infografias/observacion-astronomica/",
+      "infografias": []
+    }
+  ]
+}
