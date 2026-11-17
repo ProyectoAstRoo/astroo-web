@@ -22,6 +22,19 @@ p{color:#d5deea;margin:0 0 12px}.small{font-size:12px;color:var(--muted)}
 ul{padding-left:20px;color:#d5deea}li{margin:8px 0}.ref{padding:13px 0;border-top:1px solid var(--line)}.ref:first-child{border-top:0}.ref strong{display:block;color:#fff}.tag{display:inline-block;border:1px solid var(--line);padding:4px 9px;border-radius:20px;color:var(--muted);font-size:11px;margin:4px 5px 0 0}
 footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:11px}
 
+
+.sky-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.sky-tab{appearance:none;border:1px solid var(--line);background:#0b1423;color:var(--muted);padding:9px 16px;border-radius:8px;cursor:pointer;font:12px Nasalization,Arial,sans-serif;letter-spacing:.04em}
+.sky-tab[aria-selected="true"]{background:#12314a;border-color:#69b8f2;color:#fff}
+.sky-view{display:none}.sky-view.active{display:block}
+#astroo-stellarium{height:480px;min-height:340px;background:#02050b;border:1px solid var(--line);border-radius:10px;overflow:hidden;position:relative}
+#astroo-stellarium canvas{width:100%;height:100%;display:block}
+/* Etiqueta de identificación para el objeto que no está rotulado en el catálogo local de Stellarium. */
+#astroo-stellarium .astroo-object-label{position:absolute;z-index:5;left:50%;top:calc(50% - 34px);transform:translate(-50%,-100%);padding:5px 10px;border:1px solid rgba(105,184,242,.75);border-radius:6px;background:rgba(5,12,23,.82);color:#f4f8ff;font:12px Nasalization,Arial,sans-serif;letter-spacing:.03em;white-space:nowrap;text-shadow:0 1px 3px #000;pointer-events:none;box-shadow:0 2px 12px rgba(0,0,0,.35)}
+
+.stel-status{font-size:11px;color:var(--muted);margin:8px 0 0}
+@media(max-width:700px){#astroo-stellarium{height:360px}}
+
 .sky-map-panel .sky-map{width:100%;height:420px;min-height:320px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#050912}
 .sky-map-panel .sky-map-note{font-size:11px;color:var(--muted);margin:10px 0 0}
 @media(max-width:700px){.sky-map-panel .sky-map{height:340px;min-height:300px}}
@@ -32,6 +45,8 @@ import Aladin from "https://cdn.jsdelivr.net/npm/aladin-lite@3.9.2-beta/dist/ala
 window.A = Aladin;
 window.dispatchEvent(new Event("astroo-aladin-ready"));
 </script>
+
+<script src="./stellarium/build/stellarium-web-engine.js"></script>
 </head>
 <body>
 <header><div class="wrap"><div class="brand">AstRoo</div><a class="back" href="./index.html#galeria">← Volver a la galería</a></div></header>
@@ -68,9 +83,19 @@ async function init(){
    </section>
    <section class="panel sky-map-panel" id="localizacion-cielo">
     <h2>Localización en el cielo</h2>
-    <p class="small">Carta celeste interactiva centrada en la posición del objeto. Puedes ampliar, reducir y desplazarte por el campo.</p>
-    <div id="astroo-aladin-map" class="sky-map" role="img" aria-label="Carta celeste interactiva"></div>
-    <p class="sky-map-note">Carta generada con Aladin Lite · CDS, Strasbourg. La retícula central indica la posición del objeto.</p>
+    <p class="small">Sitúa el objeto en su constelación con Stellarium o explora su entorno astronómico con Aladin.</p>
+    <div class="sky-tabs" role="tablist" aria-label="Herramientas de localización celeste">
+      <button class="sky-tab" id="tab-stellarium" type="button" role="tab" aria-selected="true" aria-controls="view-stellarium">Stellarium · Cielo</button>
+      <button class="sky-tab" id="tab-aladin" type="button" role="tab" aria-selected="false" aria-controls="view-aladin">Aladin · Campo profundo</button>
+    </div>
+    <div class="sky-view active" id="view-stellarium" role="tabpanel" aria-labelledby="tab-stellarium">
+      <div id="astroo-stellarium" aria-label="Stellarium: carta celeste interactiva"><canvas id="astroo-stellarium-canvas"></canvas><div class="astroo-object-label">${String(ficha.id).toUpperCase() === 'IC 1396' ? 'IC 1396A · Trompa de Elefante' : `${esc(ficha.id)} · ${esc(ficha.nombre || ficha.id)}`}</div></div>
+      <p class="stel-status" id="astroo-stellarium-status">Iniciando el planetario…</p>
+    </div>
+    <div class="sky-view" id="view-aladin" role="tabpanel" aria-labelledby="tab-aladin">
+      <div id="astroo-aladin-map" class="sky-map" role="img" aria-label="Carta celeste interactiva de Aladin"></div>
+      <p class="sky-map-note">Carta generada con Aladin Lite · CDS, Strasbourg. La retícula central indica la posición del objeto.</p>
+    </div>
    </section>
    <section class="panel"><h2>Parámetros físicos y observacionales</h2><dl class="params">${phtml}</dl></section>
    <section class="panel"><h2>Morfología y estructura</h2><p>${esc(ficha.estructura)}</p></section>
@@ -86,14 +111,138 @@ async function init(){
    <p class="small">Los valores derivados se identifican como estimaciones. Las cifras dependen de la definición observacional, la banda fotométrica y el método de medida; consulta las referencias para su contexto.</p>
    <a class="back" href="./index.html#galeria">← Volver a la galería</a>`;
   document.title=`${ficha.id} — ${ficha.nombre} | AstRoo`;
+  // Pestañas de las dos herramientas de localización celeste.
+  const tabStel = document.getElementById('tab-stellarium');
+  const tabAladin = document.getElementById('tab-aladin');
+  const viewStel = document.getElementById('view-stellarium');
+  const viewAladin = document.getElementById('view-aladin');
+  function activateSkyTab(which) {
+    const useStel = which === 'stellarium';
+    tabStel.setAttribute('aria-selected', String(useStel));
+    tabAladin.setAttribute('aria-selected', String(!useStel));
+    viewStel.classList.toggle('active', useStel);
+    viewAladin.classList.toggle('active', !useStel);
+    if (!useStel) setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
+  }
+  tabStel.addEventListener('click', () => activateSkyTab('stellarium'));
+  tabAladin.addEventListener('click', () => activateSkyTab('aladin'));
+
+  // Conversión común de las coordenadas de fichas.json a grados decimales.
+  // Acepta tanto campos *_grados como coordenadas sexagesimales con signos Unicode.
+  function sexagesimalToDegrees(value, isRA) {
+    if (value == null || String(value).trim() === '') return NaN;
+    const raw = String(value).trim().replace(/[−–—]/g, '-').replace(/[＋]/g, '+');
+    const nums = raw.match(/[+-]?\d+(?:\.\d+)?/g);
+    if (!nums || !nums.length) return NaN;
+    const first = Number(nums[0]);
+    const a = Math.abs(first);
+    const b = Math.abs(Number(nums[1] || 0));
+    const c = Math.abs(Number(nums[2] || 0));
+    const sign = /^\s*-/.test(raw) || first < 0 ? -1 : 1;
+    const result = a + b / 60 + c / 3600;
+    const degrees = sign * result * (isRA ? 15 : 1);
+    if (isRA && (degrees < 0 || degrees >= 360)) return NaN;
+    if (!isRA && (degrees < -90 || degrees > 90)) return NaN;
+    return degrees;
+  }
+
+  function getFichaCoordinates(ficha) {
+    const c = ficha.coordenadas || {};
+    const raDecimal = c.ascension_recta_grados;
+    const decDecimal = c.declinacion_grados;
+    const ra = raDecimal !== undefined && raDecimal !== null && raDecimal !== ''
+      ? Number(raDecimal)
+      : sexagesimalToDegrees(c.ascension_recta, true);
+    const dec = decDecimal !== undefined && decDecimal !== null && decDecimal !== ''
+      ? Number(decDecimal)
+      : sexagesimalToDegrees(c.declinacion, false);
+    if (!Number.isFinite(ra) || !Number.isFinite(dec) || ra < 0 || ra >= 360 || dec < -90 || dec > 90) {
+      return null;
+    }
+    return { ra, dec };
+  }
+  function initAstRooStellarium(ficha) {
+    const status = document.getElementById('astroo-stellarium-status');
+    const canvas = document.getElementById('astroo-stellarium-canvas');
+    if (!window.StelWebEngine || !canvas) {
+      if (status) status.textContent = 'No se ha podido cargar el motor de Stellarium.';
+      return;
+    }
+    const coordinates = getFichaCoordinates(ficha);
+    if (!coordinates) {
+      if (status) status.textContent = 'Esta ficha no contiene coordenadas ecuatoriales válidas.';
+      return;
+    }
+    const { ra, dec } = coordinates;
+    const skyBase = new URL('./stellarium/skydata/', location.href).href;
+    try {
+      window.StelWebEngine({
+        wasmFile: './stellarium/build/stellarium-web-engine.wasm',
+        canvas,
+        translateFn: (domain, str) => str,
+        onReady: function(stel) {
+          const core = stel.core;
+          core.stars.addDataSource({url: skyBase + 'stars'});
+          core.skycultures.addDataSource({url: skyBase + 'skycultures/western', key: 'western'});
+          core.dsos.addDataSource({url: skyBase + 'dso'});
+          core.milkyway.addDataSource({url: skyBase + 'surveys/milkyway'});
+          core.constellations.lines_visible = true;
+          core.constellations.labels_visible = true;
+          if (core.atmosphere) core.atmosphere.visible = false;
+          if (core.landscapes) core.landscapes.visible = false;
+          [250, 1000, 2000].forEach(delay => setTimeout(() => {
+            if (core.atmosphere) core.atmosphere.visible = false;
+            if (core.landscapes) core.landscapes.visible = false;
+          }, delay));
+          if (status) status.textContent = 'Motor cargado · buscando ' + ficha.id + '…';
+          const aliases = [ficha.id, ...(ficha.aliases || [])];
+          const lookupNames = aliases.flatMap(name => {
+            const n = String(name);
+            return [n, n.replace(/^M(\d+)$/i, 'M $1')];
+          });
+          let attempts = 0;
+          const focus = () => {
+            attempts++;
+            let target = null;
+            for (const name of lookupNames) {
+              target = stel.getObj(name);
+              if (target) break;
+            }
+            if (target) {
+              core.selection = target;
+              stel.pointAndLock(target, 0.5);
+              const wideField = /nebula|nebulosa|sh2|ic\s*1396/i.test(String(ficha.id) + ' ' + String(ficha.tipo || ''));
+              stel.zoomTo((String(ficha.id).toUpperCase() === 'M33' ? 28 : (wideField ? 35 : 40)) * Math.PI / 180, 1.0);
+              if (status) status.textContent = ficha.id + ' localizada · ' + (ficha.constelacion || 'constelación') + ' · coordenadas J2000';
+            } else if (attempts < 20) {
+              setTimeout(focus, 750);
+            } else {
+              // Si el catálogo de Stellarium no reconoce el identificador,
+              // centra igualmente el cielo usando las coordenadas J2000 de la ficha.
+              // Así los objetos nuevos no dependen de estar incluidos en su catálogo.
+              const direction = stel.s2c(ra * Math.PI / 180, dec * Math.PI / 180);
+              stel.lookAt(direction, 1.0);
+              const wideField = /nebula|nebulosa|sh2|ic\\s*1396/i.test(String(ficha.id) + ' ' + String(ficha.tipo || ''));
+              stel.zoomTo((wideField ? 35 : 40) * Math.PI / 180, 1.0);
+              if (status) status.textContent = ficha.id + ' centrado por coordenadas · ' + (ficha.constelacion || 'constelación') + ' · J2000';
+            }
+          };
+          setTimeout(focus, 1500);
+        }
+      });
+    } catch (err) {
+      console.error('Error al iniciar Stellarium:', err);
+      if (status) status.textContent = 'No se pudo iniciar Stellarium. Consulta la consola del navegador.';
+    }
+  }
+  initAstRooStellarium(ficha);
+
   // Inicialización de Aladin Lite mediante el módulo oficial servido por jsDelivr.
   // Prioriza las coordenadas científicas de fichas.json; conserva el
   // sistema anterior como respaldo para fichas que aún no tengan grados decimales.
-  const fichaRA = Number(ficha.coordenadas?.ascension_recta_grados);
-  const fichaDec = Number(ficha.coordenadas?.declinacion_grados);
-  const sky = Number.isFinite(fichaRA) && Number.isFinite(fichaDec)
-    ? { ra: fichaRA, dec: fichaDec }
-    : photo?.localizacionCielo;
+  // Stellarium y Aladin comparten exactamente el mismo centro J2000 de la ficha.
+  // Así no se reutilizan coordenadas antiguas o aproximadas de la ficha fotográfica.
+  const sky = getFichaCoordinates(ficha) || photo?.localizacionCielo || null;
   const mapHost = document.getElementById('astroo-aladin-map');
   if (sky && Number.isFinite(Number(sky.ra)) && Number.isFinite(Number(sky.dec)) && mapHost) {
     const createMap = () => {
