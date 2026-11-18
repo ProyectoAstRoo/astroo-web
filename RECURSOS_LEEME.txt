@@ -1,0 +1,36 @@
+ASTROO - SECCION RECURSOS
+
+La nueva pestaña Recursos carga su contenido desde:
+  data/recursos.json
+
+Los archivos descargables se guardan dentro de:
+  assets/recursos/
+
+La organización por carpetas es flexible. Se han creado carpetas iniciales:
+  mapas/
+  guias/
+  articulos/
+  infografias/
+  otros/
+
+Para añadir un recurso, copia el archivo en la carpeta adecuada y añade una entrada
+al array "recursos" de data/recursos.json. La categoría se muestra como filtro y
+se crea automáticamente a partir del valor del campo "categoria".
+
+Ejemplo de entrada:
+{
+  "titulo": "Mapa estelar de ejemplo",
+  "categoria": "Mapas estelares",
+  "tipo": "pdf",
+  "descripcion": "Mapa para consulta y observación.",
+  "archivo": "./assets/recursos/mapas/mi-mapa.pdf",
+  "publicado": true,
+  "descargable": true
+}
+
+Se admiten PDF e imágenes (JPG, JPEG, PNG, WEBP y GIF). No se han añadido
+recursos de muestra para no publicar archivos inexistentes ni material sin
+comprobar sus derechos de distribución.
+
+La sección Proyectos ahora aparece dentro de Ciencia. Se conserva data/proyectos.json
+y su contenido; no se ha eliminado ni movido ningún archivo de proyectos.
