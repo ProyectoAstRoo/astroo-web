@@ -42,7 +42,8 @@
         "decTexto": "+57° 30′ 00″",
         "constelacion": "Cepheus",
         "constelacionEs": "Cefeo"
-      }
+      },
+      "lugar": "Villarcayo"
     },
     {
       "objeto": "Vía Láctea",
@@ -54,7 +55,8 @@
       "exposicion": "30 minutos",
       "sesiones": "1 sesión",
       "fechas": "14 de septiembre de 2026",
-      "publicada": true
+      "publicada": true,
+      "lugar": "Ribas de la Valduerna"
     },
     {
       "objeto": "NGC 7000",
