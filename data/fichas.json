@@ -1367,6 +1367,88 @@
         "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Messier+74",
         "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-74/"
       }
+    },
+    {
+      "id": "M97",
+      "aliases": [
+        "M 97",
+        "Messier 97",
+        "NGC 3587",
+        "Nebulosa del Búho",
+        "Nebulosa de la Lechuza",
+        "Owl Nebula"
+      ],
+      "nombre": "Nebulosa del Búho",
+      "catalogo": "Messier",
+      "tipo": "Nebulosa planetaria",
+      "constelacion": "Ursa Major (Osa Mayor)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "11h 14m 47.734s",
+        "declinacion": "+55° 01′ 08.50″",
+        "longitud_galactica": "l ≈ 148.489°",
+        "latitud_galactica": "b ≈ +57.050°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 2 030 años luz (≈ 620 pc)",
+          "detalle": "Estimación aproximada recopilada en catálogos divulgativos; las distancias a nebulosas planetarias presentan incertidumbres apreciables."
+        },
+        {
+          "nombre": "Magnitud aparente visual",
+          "valor": "≈ 9.9 mag",
+          "detalle": "Magnitud integrada aproximada; la apariencia depende de la banda y de las condiciones de observación."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "≈ 3.4′ × 3.3′",
+          "detalle": "Dimensiones aparentes aproximadas de la nebulosa; pueden variar según la banda y el límite de emisión."
+        },
+        {
+          "nombre": "Naturaleza",
+          "valor": "Nebulosa planetaria",
+          "detalle": "Envoltura de gas expulsada por una estrella evolucionada de masa baja o intermedia durante las fases finales de su evolución."
+        },
+        {
+          "nombre": "Identificación NGC",
+          "valor": "NGC 3587",
+          "detalle": "Designación correspondiente en el New General Catalogue."
+        }
+      ],
+      "estructura": "M97, también catalogada como NGC 3587, es una nebulosa planetaria situada en la constelación de la Osa Mayor. Su envoltura gaseosa presenta una morfología aproximadamente redondeada y estructuras internas de menor brillo que, visualmente, recuerdan a los ojos de un búho; de ahí su nombre popular. La apariencia depende de la longitud de onda y del contraste con el fondo.",
+      "fisica": "La nebulosa se formó cuando la estrella progenitora, al evolucionar fuera de la secuencia principal y atravesar las fases finales de su vida, expulsó sus capas externas. El núcleo estelar caliente que queda expuesto emite radiación ultravioleta capaz de ionizar el gas expulsado. La emisión observada procede principalmente de líneas de recombinación y de líneas prohibidas de distintos iones, cuya intensidad permite estudiar la temperatura, densidad y composición del gas.",
+      "entorno": "M97 se encuentra en la constelación de la Osa Mayor y aparece en el cielo a unos 50 minutos de arco de la galaxia espiral M108 (NGC 3556). La proximidad es únicamente angular: ambos objetos están a distancias físicas muy diferentes y no forman un sistema relacionado.",
+      "interes": "M97 permite estudiar la fase de nebulosa planetaria, la pérdida de masa de estrellas de baja y mediana masa y la interacción entre el viento estelar y el material expulsado previamente. Su morfología interna y su emisión en distintas líneas espectrales ofrecen información sobre la estructura y la evolución de la envoltura ionizada.",
+      "observacion": "M97 es relativamente compacta y presenta un brillo superficial moderado. En fotografía de campo amplio resulta especialmente atractiva junto a M108, una galaxia espiral vista casi de canto situada muy cerca en el cielo. El encuadre conjunto permite comparar dos objetos físicamente muy distintos: una nebulosa planetaria de la Vía Láctea y una galaxia externa.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "74 min",
+        "sesiones": "1 sesión",
+        "fechas": "12 de marzo de 2026",
+        "lugar": "Villarcayo",
+        "nota": "M97 y M108 fotografiados conjuntamente en un mismo encuadre. La integración indicada corresponde a la imagen conjunta."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: M 97",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=M97",
+          "nota": "Identificación, coordenadas y clasificación del objeto."
+        },
+        {
+          "autores": "Messier Objects",
+          "titulo": "Messier 97: Owl Nebula",
+          "publicacion": "Messier Objects",
+          "url": "https://www.messier-objects.com/messier-97-owl-nebula/",
+          "nota": "Datos generales, tamaño angular, magnitud aproximada y proximidad aparente con M108."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=M97",
+        "messier_objects": "https://www.messier-objects.com/messier-97-owl-nebula/"
+      }
     }
   ]
 }
