@@ -423,6 +423,29 @@
         "constelacion": "Ursa Major",
         "constelacionEs": "Osa Mayor"
       }
+    },
+    {
+      "objeto": "NGC 6914",
+      "nombre": "Complejo de nebulosas NGC 6914",
+      "titulo": "NGC 6914 — Complejo de nebulosas de reflexión y emisión",
+      "catalogo": "NGC",
+      "imagen": "./assets/fotos/NGC/NGC6914_S50_10-07-2026_265m_final_v1_web.jpg",
+      "alt": "Fotografía de NGC 6914, complejo de nebulosas de reflexión y emisión en la constelación del Cisne, realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "240 min",
+      "sesiones": "1 sesión",
+      "fechas": "10 de julio de 2026",
+      "lugar": "Ribas",
+      "notas": "Complejo de nebulosidad de reflexión y emisión, con polvo interestelar oscuro, en la región de Cygnus.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 306.25,
+        "dec": 42.3,
+        "raTexto": "20h 25m 00.0s",
+        "decTexto": "+42° 18′ 00″",
+        "constelacion": "Cygnus",
+        "constelacionEs": "Cisne"
+      }
     }
   ]
 }
