@@ -354,6 +354,29 @@
         "constelacion": "Canes Venatici",
         "constelacionEs": "Perros de Caza"
       }
+    },
+    {
+      "objeto": "M4",
+      "nombre": "Cúmulo globular M4",
+      "titulo": "M4 — Cúmulo globular",
+      "catalogo": "Messier",
+      "imagen": "./assets/fotos/Messier/M004_S50_17-06-2025_.90m_final_web.jpg",
+      "alt": "Fotografía de M4, cúmulo globular NGC 6121 en la constelación de Scorpius, realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "90 min",
+      "sesiones": "1 sesión",
+      "fechas": "17 de junio de 2025",
+      "lugar": "Villarcayo",
+      "notas": "Cúmulo globular Messier 4 (NGC 6121).",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 245.89675,
+        "dec": -26.52575,
+        "raTexto": "16h 23m 35.22s",
+        "decTexto": "−26° 31′ 32.7″",
+        "constelacion": "Scorpius",
+        "constelacionEs": "Escorpio"
+      }
     }
   ]
 }
