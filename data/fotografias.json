@@ -400,6 +400,29 @@
         "constelacion": "Pisces",
         "constelacionEs": "Piscis"
       }
+    },
+    {
+      "objeto": "M97",
+      "nombre": "Nebulosa del Búho y Galaxia de la Tabla de Surf",
+      "titulo": "M97 y M108 — Nebulosa del Búho y Galaxia de la Tabla de Surf",
+      "catalogo": "Messier",
+      "imagen": "./assets/fotos/Messier/M097.108_S50_12-03-2026_74m_final_web.jpg",
+      "alt": "Fotografía conjunta de M97, la Nebulosa del Búho, y M108, la Galaxia de la Tabla de Surf, realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "74 min",
+      "sesiones": "1 sesión",
+      "fechas": "12 de marzo de 2026",
+      "lugar": "Villarcayo",
+      "notas": "Encuadre conjunto de M97 (NGC 3587), nebulosa planetaria, y M108 (NGC 3556), galaxia espiral vista casi de canto.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 168.289046,
+        "dec": 55.346614,
+        "raTexto": "11h 13m 09s",
+        "decTexto": "+55° 20′ 47″",
+        "constelacion": "Ursa Major",
+        "constelacionEs": "Osa Mayor"
+      }
     }
   ]
 }
