@@ -1181,6 +1181,102 @@
         "simbad": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=Messier+3",
         "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-3/"
       }
+    },
+    {
+      "id": "M4",
+      "aliases": [
+        "M 4",
+        "Messier 4",
+        "NGC 6121",
+        "Cúmulo del Cangrejo",
+        "Globular Cluster M4"
+      ],
+      "nombre": "Cúmulo globular M4",
+      "catalogo": "Messier",
+      "tipo": "Cúmulo globular (clase de concentración IX)",
+      "constelacion": "Scorpius (Escorpio)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "16h 23m 35.22s",
+        "declinacion": "−26° 31′ 32.7″",
+        "ascension_recta_grados": 245.89675,
+        "declinacion_grados": -26.52575,
+        "longitud_galactica": "l = 350.97293°",
+        "latitud_galactica": "b = +15.97218°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 2.2 kpc",
+          "detalle": "Distancia de referencia equivalente a unos 7 200 años luz; las determinaciones pueden variar según el método."
+        },
+        {
+          "nombre": "Distancia en años luz",
+          "valor": "≈ 7 200 años luz",
+          "detalle": "Valor de referencia publicado por ESO para el cúmulo globular M4."
+        },
+        {
+          "nombre": "Magnitud aparente visual",
+          "valor": "≈ 5.6–5.9 mag",
+          "detalle": "Los catálogos y fuentes divulgativas ofrecen valores ligeramente distintos según la banda y la compilación."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "≈ 26.3′",
+          "detalle": "Diámetro angular catalogado por SIMBAD; la extensión visible depende del límite superficial adoptado."
+        },
+        {
+          "nombre": "Velocidad radial",
+          "valor": "≈ +71 km/s",
+          "detalle": "Valor heliocéntrico recopilado por SIMBAD; el signo positivo indica alejamiento en la convención habitual."
+        },
+        {
+          "nombre": "Identificador NGC",
+          "valor": "NGC 6121",
+          "detalle": "Designación alternativa del mismo cúmulo globular."
+        }
+      ],
+      "estructura": "M4 (NGC 6121) es un cúmulo globular de la Vía Láctea situado en la constelación de Escorpio, muy próximo en el cielo a Antares. Es un sistema aproximadamente esférico formado por una población muy antigua de estrellas ligadas gravitacionalmente. Su concentración central es relativamente poco pronunciada en comparación con la de cúmulos globulares más compactos, por lo que su estructura estelar puede resolverse en imágenes de campo adecuado.",
+      "fisica": "Las estrellas de M4 están ligadas por la gravedad mutua y orbitan alrededor del centro de masa del cúmulo. La evolución dinámica incluye relajación gravitatoria, segregación de masas e interacciones estelares, procesos que modifican gradualmente su distribución interna. M4 contiene numerosas estrellas evolucionadas y variables; su proximidad lo convierte en un laboratorio útil para estudiar poblaciones estelares antiguas y la evolución dinámica de cúmulos globulares.",
+      "entorno": "M4 se encuentra en el halo galáctico, en dirección a la constelación de Escorpio, a pocos grados de Antares en el cielo. Su posición relativamente cercana y su gran tamaño angular aparente hacen que sea uno de los cúmulos globulares más destacados visualmente. La línea de visión atraviesa regiones con absorción interestelar, por lo que la extinción debe tenerse en cuenta al comparar magnitudes observadas e intrínsecas.",
+      "interes": "M4 es especialmente importante por su cercanía y por la posibilidad de resolver numerosas estrellas individuales. Los estudios fotométricos y espectroscópicos permiten investigar la edad, composición química, poblaciones múltiples, estrellas variables y evolución dinámica de un cúmulo globular. Su relativa proximidad facilita además la construcción de diagramas color-magnitud profundos y el seguimiento de movimientos propios.",
+      "observacion": "M4 es un cúmulo globular extenso y relativamente brillante, situado cerca de Antares en Escorpio. En fotografía conviene utilizar un campo que incluya el conjunto del cúmulo y permita resolver sus estrellas periféricas. Su baja declinación desde latitudes medias del hemisferio norte hace que alcance poca altura sobre el horizonte; para obtener imágenes nítidas es importante observarlo cuando culmina y evitar la turbulencia y extinción atmosférica de las capas bajas.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "90 min",
+        "sesiones": "1 sesión",
+        "fechas": "17 de junio de 2025",
+        "lugar": "Villarcayo",
+        "nota": "Fotografía de AstRoo realizada durante una sesión."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: M 4 (NGC 6121)",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=M+4",
+          "nota": "Identificadores, coordenadas ICRS/J2000, coordenadas galácticas, velocidad radial y tamaño angular."
+        },
+        {
+          "autores": "European Southern Observatory (ESO)",
+          "titulo": "Messier 4 (M4) globular cluster",
+          "publicacion": "ESO — Image and object information",
+          "url": "https://www.eso.org/public/images/m4/",
+          "nota": "Naturaleza del objeto, constelación y distancia aproximada de 5 500 años luz; otras compilaciones ofrecen distancias mayores."
+        },
+        {
+          "autores": "NASA",
+          "titulo": "Astrophotography Guide — Table 4: Catalog of Messier Objects",
+          "publicacion": "NASA",
+          "url": "https://science.nasa.gov/wp-content/uploads/2023/09/Astrophotography_Guide.pdf",
+          "nota": "Datos de catálogo para M4: tipo, constelación, coordenadas aproximadas, magnitud y tamaño angular."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=M+4",
+        "eso": "https://www.eso.org/public/images/m4/",
+        "nasa": "https://science.nasa.gov/wp-content/uploads/2023/09/Astrophotography_Guide.pdf"
+      }
     }
   ]
 }
