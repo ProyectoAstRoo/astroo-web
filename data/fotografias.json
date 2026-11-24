@@ -377,6 +377,29 @@
         "constelacion": "Scorpius",
         "constelacionEs": "Escorpio"
       }
+    },
+    {
+      "objeto": "M74",
+      "nombre": "Galaxia Fantasma",
+      "titulo": "M74 — Galaxia Fantasma",
+      "catalogo": "Messier",
+      "imagen": "./assets/fotos/Messier/M074_25-12-2024_68m_final_web.JPG.jpg",
+      "alt": "Fotografía de M74, la Galaxia Fantasma (NGC 628), realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "68 min",
+      "sesiones": "1 sesión",
+      "fechas": "25 de diciembre de 2024",
+      "lugar": "Ribas",
+      "notas": "Galaxia espiral M74 (NGC 628), conocida como Galaxia Fantasma.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 24.173938,
+        "dec": 15.783641,
+        "raTexto": "01h 36m 41.745s",
+        "decTexto": "+15° 47′ 01.1″",
+        "constelacion": "Pisces",
+        "constelacionEs": "Piscis"
+      }
     }
   ]
 }
