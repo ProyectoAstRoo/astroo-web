@@ -331,6 +331,29 @@
         "constelacion": "Cygnus",
         "constelacionEs": "Cisne"
       }
+    },
+    {
+      "objeto": "M3",
+      "nombre": "Cúmulo globular M3",
+      "titulo": "M3 — Cúmulo globular",
+      "catalogo": "Messier",
+      "imagen": "./assets/fotos/Messier/M003_S50_28-05-2025_30m_final_web.jpg",
+      "alt": "Fotografía de M3, cúmulo globular en la constelación de Canes Venatici, realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "30 min",
+      "sesiones": "1 sesión",
+      "fechas": "28 de mayo de 2025",
+      "lugar": "Villarcayo",
+      "notas": "Cúmulo globular Messier 3 (NGC 5272).",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 205.548417,
+        "dec": 28.377278,
+        "raTexto": "13h 42m 11.62s",
+        "decTexto": "+28° 22′ 38.2″",
+        "constelacion": "Canes Venatici",
+        "constelacionEs": "Perros de Caza"
+      }
     }
   ]
 }
