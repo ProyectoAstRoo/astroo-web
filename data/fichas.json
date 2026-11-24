@@ -1449,6 +1449,99 @@
         "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=M97",
         "messier_objects": "https://www.messier-objects.com/messier-97-owl-nebula/"
       }
+    },
+    {
+      "id": "NGC 6914",
+      "aliases": [
+        "NGC6914",
+        "LBN 274",
+        "LBN 080.10+02.66",
+        "LBN 080.26+02.54",
+        "LBN 280",
+        "Complejo NGC 6914",
+        "NGC 6914 Complex"
+      ],
+      "nombre": "Complejo de nebulosas NGC 6914",
+      "catalogo": "NGC",
+      "tipo": "Complejo de nebulosidad de reflexión y emisión asociado a una región H II; incluye nubes de polvo interestelar.",
+      "constelacion": "Cygnus (Cisne)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "20h 25m 00.0s",
+        "declinacion": "+42° 18′ 00″",
+        "ascension_recta_grados": 306.25,
+        "declinacion_grados": 42.3,
+        "longitud_galactica": "l = 80.1231°",
+        "latitud_galactica": "b = +2.6110°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia aproximada",
+          "valor": "≈ 6 000 años luz (≈ 1.84 kpc)",
+          "detalle": "Distancia divulgativa aproximada indicada en la descripción del complejo NGC 6914 publicada por NASA/APOD. Se refiere al complejo de nebulosas y no a una medición de paralaje individual de cada condensación."
+        },
+        {
+          "nombre": "Naturaleza",
+          "valor": "Nebulosidad de reflexión y emisión",
+          "detalle": "La región combina luz azul de estrellas jóvenes dispersada por polvo y emisión rojiza del hidrógeno ionizado."
+        },
+        {
+          "nombre": "Extensión del campo del complejo",
+          "valor": "Del orden de 1°",
+          "detalle": "El campo amplio que contiene el complejo abarca aproximadamente un grado; la extensión exacta depende de qué estructuras difusas se incluyan."
+        },
+        {
+          "nombre": "Coordenadas ecuatoriales",
+          "valor": "20h 25m 00.0s ; +42° 18′ 00″",
+          "detalle": "Posición ICRS/J2000 de referencia recogida por SIMBAD para NGC 6914."
+        },
+        {
+          "nombre": "Coordenadas galácticas",
+          "valor": "l = 80.1231° ; b = +2.6110°",
+          "detalle": "Coordenadas galácticas J2000 recopiladas por SIMBAD."
+        }
+      ],
+      "estructura": "NGC 6914 se encuentra en un complejo de nebulosidad del plano de la Vía Láctea, en la constelación del Cisne. La región presenta un marcado contraste entre nebulosas de reflexión azuladas, nebulosidad de emisión rojiza y nubes de polvo oscuro que aparecen en silueta. En el entorno se identifican estructuras de reflexión catalogadas también como vdB 131 y vdB 132.",
+      "fisica": "La componente azulada se produce cuando el polvo interestelar dispersa la luz de estrellas jóvenes y calientes. La emisión rojiza procede principalmente del hidrógeno ionizado: la radiación ultravioleta de estrellas masivas arranca electrones de los átomos de hidrógeno y la recombinación posterior genera líneas de emisión, entre ellas Hα. El polvo más denso absorbe y bloquea la luz de las regiones situadas detrás, formando nebulosas oscuras.",
+      "entorno": "El complejo está situado en la dirección de la asociación Cygnus OB2. Las estrellas masivas y calientes de esta asociación proporcionan radiación ultravioleta capaz de ionizar el gas de hidrógeno y, junto con estrellas jóvenes inmersas en la región, iluminan el polvo circundante. El conjunto se encuentra aproximadamente a 6 000 años luz, según la distancia divulgativa utilizada por NASA/APOD.",
+      "interes": "NGC 6914 ofrece en un mismo campo varios procesos del medio interestelar: reflexión de luz estelar, fotoionización del hidrógeno y absorción por polvo. La combinación de nebulosidad azul, emisión roja y regiones oscuras permite estudiar cómo interactúan las estrellas jóvenes con el gas y el polvo de su entorno.",
+      "observacion": "Es una región extensa y de bajo brillo superficial, por lo que resulta especialmente adecuada para fotografía de campo amplio y tiempos de integración prolongados. En imágenes de banda ancha destacan las nebulosas de reflexión azuladas y el polvo oscuro; la emisión Hα resalta las zonas de hidrógeno ionizado. Conviene conservar suficiente campo alrededor de NGC 6914 para mostrar el complejo nebuloso circundante.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "240 min",
+        "sesiones": "1 sesión",
+        "fechas": "10 de julio de 2026",
+        "lugar": "Ribas",
+        "nota": "Fotografía de AstRoo realizada con Seestar S50. Tiempo de integración indicado por el autor: 240 minutos."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: NGC 6914",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.harvard.edu/simbad/sim-id?Ident=NGC+6914",
+          "nota": "Identificación, tipo de objeto, coordenadas ICRS/J2000, coordenadas galácticas e identificadores alternativos."
+        },
+        {
+          "autores": "NASA / Astronomy Picture of the Day",
+          "titulo": "The NGC 6914 Complex",
+          "publicacion": "NASA Science — APOD, 19 de septiembre de 2025",
+          "url": "https://science.nasa.gov/image-article/apod-2025-september-19-the-ngc-6914-complex/",
+          "nota": "Descripción de las componentes de reflexión y emisión, polvo interestelar, asociación Cygnus OB2 y distancia aproximada de 6 000 años luz."
+        },
+        {
+          "autores": "Perseus.gr",
+          "titulo": "NGC 6914 — Reflection Nebulae in Cygnus",
+          "publicacion": "Astrophotography by Anthony Ayiomamitis",
+          "url": "https://www.perseus.gr/Astro-DSO-NGC-6914.htm",
+          "nota": "Contexto observacional del complejo y de las nebulosas de reflexión vdB 131 y vdB 132."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.harvard.edu/simbad/sim-id?Ident=NGC+6914",
+        "nasa_apod": "https://science.nasa.gov/image-article/apod-2025-september-19-the-ngc-6914-complex/",
+        "vdB_context": "https://www.perseus.gr/Astro-DSO-NGC-6914.htm"
+      }
     }
   ]
 }
