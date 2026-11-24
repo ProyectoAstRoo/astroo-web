@@ -1277,6 +1277,96 @@
         "eso": "https://www.eso.org/public/images/m4/",
         "nasa": "https://science.nasa.gov/wp-content/uploads/2023/09/Astrophotography_Guide.pdf"
       }
+    },
+    {
+      "id": "M74",
+      "aliases": [
+        "M 74",
+        "Messier 74",
+        "NGC 628",
+        "UGC 1149",
+        "Galaxia Fantasma",
+        "Galaxia del Abanico",
+        "Phantom Galaxy"
+      ],
+      "nombre": "Galaxia Fantasma",
+      "catalogo": "Messier",
+      "tipo": "Galaxia espiral de gran diseño, clasificación morfológica Sc (SIMBAD)",
+      "constelacion": "Pisces (Piscis)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "01h 36m 41.745s",
+        "declinacion": "+15° 47′ 01.1″",
+        "ascension_recta_grados": 24.173938,
+        "declinacion_grados": 15.783641,
+        "longitud_galactica": "l = 138.6168°",
+        "latitud_galactica": "b = −45.7053°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 32 millones de años luz",
+          "detalle": "Valor divulgativo de NASA; las estimaciones publicadas dependen del método y de los indicadores de distancia."
+        },
+        {
+          "nombre": "Magnitud aparente visual",
+          "valor": "≈ 10.0 mag",
+          "detalle": "Valor indicado por NASA. La baja luminosidad superficial hace que sea más difícil de observar de lo que su magnitud integrada podría sugerir."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "≈ 6.70′ × 6.65′",
+          "detalle": "Dimensiones ópticas recopiladas por SIMBAD; el tamaño depende del límite isofotal y de la banda."
+        },
+        {
+          "nombre": "Clasificación morfológica",
+          "valor": "Sc",
+          "detalle": "Clasificación espiral de tipo tardío recogida por SIMBAD (referencia morfológica 2019MNRAS.485.1477K)."
+        },
+        {
+          "nombre": "Velocidad radial heliocéntrica",
+          "valor": "≈ +658 km/s",
+          "detalle": "Valor recopilado por SIMBAD; el corrimiento al rojo espectroscópico asociado es z ≈ 0.002197."
+        },
+        {
+          "nombre": "Identificador NGC",
+          "valor": "NGC 628",
+          "detalle": "Designación alternativa de la misma galaxia."
+        }
+      ],
+      "estructura": "M74 (NGC 628), conocida como Galaxia Fantasma o Galaxia del Abanico, es una galaxia espiral vista casi de frente en la constelación de Piscis. Su orientación permite observar el patrón de brazos espirales que parten de la región central y se extienden por el disco. En los brazos se distinguen regiones de formación estelar y nubes de gas y polvo.",
+      "fisica": "Las regiones rosadas visibles en imágenes de alta sensibilidad corresponden a regiones H II: nubes de hidrógeno ionizado por la radiación ultravioleta de estrellas jóvenes y masivas. El disco contiene estrellas, gas y polvo; el estudio de su distribución permite investigar la formación estelar y la estructura de una galaxia espiral cercana en términos cosmológicos.",
+      "entorno": "M74 se encuentra en la constelación de Piscis y es uno de los miembros destacados del grupo de galaxias de M74. Su orientación casi frontal ofrece una vista directa de la estructura del disco, aunque su bajo brillo superficial dificulta la observación visual y el registro de las regiones externas.",
+      "interes": "M74 es un objeto de interés para estudiar la estructura de los brazos espirales, las regiones H II y la formación estelar en discos galácticos. Su aspecto casi frontal permite comparar la distribución de las regiones de formación estelar con la estructura global de la galaxia. También ha sido objetivo de observaciones en múltiples longitudes de onda, incluidas imágenes del telescopio espacial Hubble.",
+      "observacion": "M74 es conocida por su bajo brillo superficial y por ser uno de los objetos Messier más exigentes para la observación visual. Aunque su magnitud aparente integrada ronda la 10, la luz se distribuye sobre una superficie relativamente amplia. Para fotografiarla conviene disponer de un cielo oscuro, buena transparencia y suficiente tiempo de integración para registrar los brazos espirales y las regiones externas.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "68 min",
+        "sesiones": "1 sesión",
+        "fechas": "25 de diciembre de 2024",
+        "lugar": "Ribas",
+        "nota": "Fotografía de AstRoo realizada durante una sesión."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: Messier 74 (NGC 628)",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Messier+74",
+          "nota": "Identificadores, coordenadas ICRS/J2000, coordenadas galácticas, clasificación morfológica, tamaño angular y velocidad radial."
+        },
+        {
+          "autores": "NASA / ESA",
+          "titulo": "Messier 74",
+          "publicacion": "NASA Science — Hubble Messier Catalog",
+          "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-74/",
+          "nota": "Distancia aproximada, magnitud aparente, constelación, tipo de galaxia y descripción de las regiones de formación estelar."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Messier+74",
+        "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-74/"
+      }
     }
   ]
 }
