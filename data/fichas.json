@@ -1093,6 +1093,94 @@
         "simbad": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=NGC+6960",
         "nasa": "https://science.nasa.gov/asset/hubble/the-veil-nebula-ngc-6960/"
       }
+    },
+    {
+      "id": "M3",
+      "aliases": [
+        "M 3",
+        "Messier 3",
+        "NGC 5272",
+        "GCl 25",
+        "Cúmulo globular M3"
+      ],
+      "nombre": "Cúmulo globular M3",
+      "catalogo": "Messier",
+      "tipo": "Cúmulo globular (clase de concentración VI)",
+      "constelacion": "Canes Venatici (Perros de Caza)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0",
+        "ascension_recta": "13h 42m 11.62s",
+        "declinacion": "+28° 22′ 38.2″",
+        "ascension_recta_grados": 205.548417,
+        "declinacion_grados": 28.377278,
+        "longitud_galactica": "l = 42.21695°",
+        "latitud_galactica": "b = +78.70685°"
+      },
+      "parametros": [
+        {
+          "nombre": "Distancia",
+          "valor": "≈ 10.4 kpc",
+          "detalle": "Equivalente a unos 34 000 años luz; valor divulgativo de referencia."
+        },
+        {
+          "nombre": "Distancia en años luz",
+          "valor": "≈ 34 000 años luz",
+          "detalle": "Valor publicado por NASA para el cúmulo."
+        },
+        {
+          "nombre": "Magnitud aparente integrada V",
+          "valor": "6.39 mag",
+          "detalle": "Fotometría recopilada por SIMBAD; NASA ofrece el valor redondeado de 6.2 mag."
+        },
+        {
+          "nombre": "Tamaño angular",
+          "valor": "16.2′",
+          "detalle": "Diámetro angular catalogado por SIMBAD; otras fuentes redondean la extensión a unos 18′."
+        },
+        {
+          "nombre": "Población estelar",
+          "valor": "Más de 500 000 estrellas",
+          "detalle": "Estimación divulgativa recogida por NASA."
+        },
+        {
+          "nombre": "Velocidad radial heliocéntrica",
+          "valor": "−147.2 ± 0.2 km s⁻¹",
+          "detalle": "Valor espectroscópico recopilado por SIMBAD; el signo negativo indica aproximación en esta convención."
+        }
+      ],
+      "estructura": "M3 (NGC 5272) es un cúmulo globular compacto y rico en estrellas, formado por una población estelar antigua ligada gravitacionalmente. Su concentración central es moderada —clase VI en la clasificación de Shapley–Sawyer— y su halo se extiende varios minutos de arco. Como en otros cúmulos globulares, las estrellas están distribuidas en una estructura aproximadamente esférica y la densidad aumenta hacia el centro.",
+      "fisica": "La población de M3 está dominada por estrellas viejas y pobres en metales, evolucionadas a partir de una población formada hace muchos miles de millones de años. Su diagrama color-magnitud muestra una rama horizontal bien poblada y una secuencia de gigantes rojas. El cúmulo contiene numerosas estrellas variables, especialmente variables RR Lyrae, que resultan útiles para estudiar la población estelar y calibrar escalas de distancia.",
+      "entorno": "M3 se encuentra en la constelación boreal de Canes Venatici, en una dirección de alta latitud galáctica. Su posición, lejos del plano de la Vía Láctea, reduce la confusión con los campos estelares y el polvo del disco galáctico. Está catalogado también como NGC 5272 y GCl 25.",
+      "interes": "M3 es uno de los cúmulos globulares clásicos para estudiar evolución estelar, poblaciones antiguas y estrellas variables. NASA destaca que alberga más de 500 000 estrellas y al menos 274 variables. Las variables RR Lyrae de M3 permiten investigar la estructura y evolución del cúmulo y sirven como trazadores de distancia.",
+      "observacion": "M3 tiene una magnitud integrada cercana a 6.4 y un diámetro angular de unos 16 minutos de arco. Puede localizarse con prismáticos bajo cielos oscuros, aunque para resolver estrellas individuales conviene utilizar telescopios de mayor abertura y aumentos moderados o altos. En fotografía de campo amplio aparece como una concentración compacta y luminosa; la resolución del núcleo depende de la escala de imagen, la calidad del cielo y el tratamiento de las estrellas.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "30 min",
+        "sesiones": "1 sesión",
+        "fechas": "28 de mayo de 2025",
+        "lugar": "Villarcayo",
+        "nota": "Fotografía de AstRoo realizada con Seestar S50. Datos de captura facilitados por el autor."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: M 3",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=Messier+3",
+          "nota": "Identificadores, coordenadas ICRS/J2000, coordenadas galácticas, tamaño angular, fotometría y velocidad radial."
+        },
+        {
+          "autores": "NASA / ESA",
+          "titulo": "Messier 3",
+          "publicacion": "NASA Science — Hubble Messier Catalog",
+          "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-3/",
+          "nota": "Distancia aproximada, magnitud, constelación, población estelar y variables del cúmulo."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad": "https://simbad.u-strasbg.fr/simbad/sim-id?Ident=Messier+3",
+        "nasa": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-3/"
+      }
     }
   ]
 }
