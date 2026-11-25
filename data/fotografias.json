@@ -2,6 +2,28 @@
   "version": 1,
   "fotografias": [
     {
+      "objeto": "NGC 6939/6946",
+      "nombre": "Cúmulo abierto NGC 6939 y Galaxia de los Fuegos Artificiales",
+      "titulo": "NGC 6939 y NGC 6946 — Cúmulo abierto y Galaxia de los Fuegos Artificiales",
+      "catalogo": "NGC",
+      "imagen": "./assets/fotos/NGC/NGC6939.6946_S50_01-08-2026_248m_final_V2.jpg",
+      "alt": "Fotografía conjunta del cúmulo abierto NGC 6939 y la galaxia espiral NGC 6946, realizada con Seestar S50",
+      "telescopio": "Seestar S50",
+      "exposicion": "248 min",
+      "fechas": "1 de agosto de 2026",
+      "lugar": "Ribas de la Valduerna",
+      "notas": "Encuadre conjunto del cúmulo abierto NGC 6939 y la galaxia espiral NGC 6946 (Galaxia de los Fuegos Artificiales). Tiempo de integración: 248 minutos.",
+      "publicada": true,
+      "localizacionCielo": {
+        "ra": 308.317567,
+        "dec": 60.403367,
+        "raTexto": "20h 33m 16.2s",
+        "decTexto": "+60° 24′ 12″",
+        "constelacion": "Cepheus",
+        "constelacionEs": "Cefeo"
+      }
+    },
+    {
       "objeto": "M33",
       "nombre": "Galaxia del Triángulo",
       "titulo": "M33 — Galaxia del Triángulo",
