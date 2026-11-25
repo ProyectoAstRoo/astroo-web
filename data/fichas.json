@@ -2,6 +2,138 @@
   "version": 1,
   "fichas": [
     {
+      "id": "NGC 6939/6946",
+      "aliases": [
+        "NGC 6939",
+        "NGC6939",
+        "Melotte 231",
+        "NGC 6946",
+        "NGC6946",
+        "Caldwell 12",
+        "C 12",
+        "Arp 29",
+        "Galaxia de los Fuegos Artificiales",
+        "Fireworks Galaxy"
+      ],
+      "nombre": "NGC 6939 y NGC 6946 — Cúmulo abierto y Galaxia de los Fuegos Artificiales",
+      "catalogo": "NGC",
+      "tipo": "Encuadre conjunto de dos objetos físicamente independientes: el cúmulo abierto NGC 6939 y la galaxia espiral de gran diseño NGC 6946.",
+      "constelacion": "Cepheus (Cefeo; NGC 6946 se encuentra próxima al límite con Cygnus)",
+      "coordenadas": {
+        "sistema": "ICRS / época J2000.0; centro aproximado entre las posiciones catalogadas de ambos objetos",
+        "ascension_recta": "20h 33m 16.2s",
+        "declinacion": "+60° 24′ 12″",
+        "ascension_recta_grados": 308.317567,
+        "declinacion_grados": 60.403367
+      },
+      "parametros": [
+        {
+          "nombre": "Naturaleza de los objetos",
+          "valor": "Cúmulo abierto + galaxia espiral",
+          "detalle": "NGC 6939 es un cúmulo abierto de la Vía Láctea; NGC 6946 es una galaxia espiral externa. Su proximidad es únicamente aparente en el cielo."
+        },
+        {
+          "nombre": "Distancia de NGC 6939",
+          "valor": "≈ 1.82 kpc (≈ 5 940 años luz)",
+          "detalle": "Distancia recopilada por SIMBAD a partir de medidas de paralaje. La cifra depende del catálogo y del método astrométrico utilizado."
+        },
+        {
+          "nombre": "Edad de NGC 6939",
+          "valor": "≈ 1.7–2.2 mil millones de años",
+          "detalle": "Los análisis basados en Gaia y estudios de abundancias sitúan el cúmulo en la categoría de cúmulos abiertos relativamente antiguos; la edad depende del ajuste de isocronas y de la muestra de miembros."
+        },
+        {
+          "nombre": "Tamaño angular de NGC 6939",
+          "valor": "≈ 14.8′",
+          "detalle": "Diámetro angular recopilado por SIMBAD; el límite depende de la selección de miembros y del criterio fotométrico."
+        },
+        {
+          "nombre": "Distancia de NGC 6946",
+          "valor": "7.72 ± 0.32 Mpc (≈ 25.2 ± 1.0 millones de años luz)",
+          "detalle": "Distancia basada en la punta de la rama de gigantes rojas, recomendada en trabajos sobre la galaxia. En la literatura existen estimaciones anteriores más cortas."
+        },
+        {
+          "nombre": "Tipo morfológico de NGC 6946",
+          "valor": "Sc (espiral de gran diseño)",
+          "detalle": "Clasificación morfológica recopilada por SIMBAD. Presenta brazos espirales bien definidos y abundantes regiones de formación estelar."
+        },
+        {
+          "nombre": "Tamaño angular de NGC 6946",
+          "valor": "11.48′ × 10.72′",
+          "detalle": "Dimensiones ópticas recopiladas por SIMBAD; pueden variar según la banda y el límite isofotal empleado."
+        },
+        {
+          "nombre": "Actividad de supernovas",
+          "valor": "Más de diez supernovas observadas en aproximadamente un siglo",
+          "detalle": "La elevada tasa histórica de supernovas observadas contribuye al sobrenombre de Galaxia de los Fuegos Artificiales. El recuento depende del periodo y de los criterios de inclusión."
+        }
+      ],
+      "estructura": "NGC 6939 es un cúmulo abierto situado en la constelación de Cefeo, formado por estrellas que comparten un origen y un movimiento común dentro del disco de la Vía Láctea. NGC 6946, también conocida como Galaxia de los Fuegos Artificiales o Caldwell 12, es una galaxia espiral de gran diseño vista con una inclinación relativamente baja. Sus brazos contienen numerosas regiones H II y complejos de formación estelar. Aunque aparecen próximas en el mismo campo, los dos objetos no están relacionados físicamente: NGC 6939 pertenece a nuestra Galaxia y NGC 6946 se encuentra a unos 25 millones de años luz.",
+      "fisica": "En NGC 6939, el estudio de las estrellas miembros permite reconstruir la evolución dinámica y química de un cúmulo abierto antiguo, así como analizar la dispersión de sus estrellas por las fuerzas de marea del disco galáctico. En NGC 6946, la formación estelar activa produce abundantes estrellas masivas que ionizan el gas circundante y generan regiones H II brillantes. La evolución de esas estrellas masivas explica la frecuencia elevada de explosiones de supernova observadas en la galaxia.",
+      "entorno": "Ambos objetos se proyectan en la región de Cefeo. NGC 6939 se encuentra dentro de la Vía Láctea, a unos pocos miles de años luz. NGC 6946 está mucho más lejos, en el entorno extragaláctico próximo, y su posición se sitúa cerca del límite entre las constelaciones de Cefeo y el Cisne. La cercanía angular entre ambos objetos permite registrarlos en un mismo encuadre de campo amplio, pero no implica interacción ni asociación física.",
+      "interes": "El campo es especialmente interesante porque reúne dos escalas astronómicas muy diferentes: una población estelar ligada gravitacionalmente dentro de la Vía Láctea y una galaxia espiral externa con intensa formación estelar. NGC 6946 destaca por su historial de supernovas, que permite estudiar la muerte de estrellas masivas, la retroalimentación sobre el medio interestelar y el enriquecimiento químico de una galaxia.",
+      "observacion": "NGC 6939 y NGC 6946 se encuentran separados por menos de un grado en el cielo y pueden fotografiarse conjuntamente con un campo suficientemente amplio. El cúmulo abierto aparece como una concentración de estrellas resueltas, mientras que NGC 6946 muestra una estructura difusa cuyo detalle depende del tiempo de integración, la calidad del cielo y el procesado. Para distinguir los brazos y las regiones de formación estelar de la galaxia conviene acumular una integración prolongada y cuidar el contraste sin perder las estrellas del cúmulo.",
+      "captura": {
+        "equipo": "Seestar S50",
+        "integracion": "248 min",
+        "sesiones": "No especificado",
+        "fechas": "1 de agosto de 2026",
+        "lugar": "Ribas de la Valduerna",
+        "nota": "Fotografía conjunta de NGC 6939 y NGC 6946 realizada por AstRoo. La integración indicada corresponde al encuadre completo."
+      },
+      "referencias": [
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: NGC 6939",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=NGC6939",
+          "nota": "Identificación, coordenadas ICRS/J2000, tamaño angular y datos astrométricos y de distancia recopilados."
+        },
+        {
+          "autores": "Wenger, M. et al. / CDS",
+          "titulo": "SIMBAD Astronomical Database: NGC 6946",
+          "publicacion": "Centre de Données astronomiques de Strasbourg",
+          "url": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=NGC6946",
+          "nota": "Identificación, coordenadas ICRS/J2000, tipo morfológico, tamaño angular y velocidad radial."
+        },
+        {
+          "autores": "Anand, G. S., Rizzi, L. & Tully, R. B. (2018)",
+          "titulo": "The Distance to NGC 6946",
+          "publicacion": "The Astronomical Journal; distancia mediante la punta de la rama de gigantes rojas",
+          "url": "https://ui.adsabs.harvard.edu/abs/2018AJ....156..105A/abstract",
+          "nota": "Determinación de distancia de 7.72 ± 0.32 Mpc, utilizada como referencia para NGC 6946."
+        },
+        {
+          "autores": "Bijavara Seshashayana, S. et al. (2024)",
+          "titulo": "A&A, 689, A120",
+          "publicacion": "Astronomy & Astrophysics",
+          "url": "https://www.aanda.org/articles/aa/pdf/2024/09/aa51056-24.pdf",
+          "nota": "Incluye una edad de 1.70 Gyr para NGC 6939 en el contexto de un estudio de estrellas de cúmulos abiertos."
+        },
+        {
+          "autores": "Eldridge, J. J. & Xiao, L. (2019)",
+          "titulo": "The distance, supernova rate, and supernova progenitors of NGC 6946",
+          "publicacion": "Monthly Notices of the Royal Astronomical Society, 485, L58–L61",
+          "doi": "10.1093/mnrasl/slz039",
+          "url": "https://doi.org/10.1093/mnrasl/slz039",
+          "nota": "Discute la distancia de NGC 6946 y las implicaciones de su elevada tasa de supernovas."
+        },
+        {
+          "autores": "Department of Astrophysics, University of Zurich",
+          "titulo": "Fireworks Galaxy (NGC 6946)",
+          "publicacion": "University of Zurich",
+          "url": "https://www.astro.uzh.ch/en/studies/gallery/ngc6946.html",
+          "nota": "Descripción de la galaxia espiral, su actividad de formación estelar y el elevado número de supernovas observadas."
+        }
+      ],
+      "fuentes_urls": {
+        "simbad_ngc6939": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=NGC6939",
+        "simbad_ngc6946": "https://simbad.u-strasbg.fr/simbad/sim-basic?Ident=NGC6946",
+        "distancia_ngc6946": "https://ui.adsabs.harvard.edu/abs/2018AJ....156..105A/abstract",
+        "universidad_zurich": "https://www.astro.uzh.ch/en/studies/gallery/ngc6946.html"
+      }
+    },
+    {
       "id": "M33",
       "aliases": [
         "M 33",
